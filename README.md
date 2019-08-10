@@ -16,7 +16,7 @@ This is a basic LAMP stack environment built using Docker Compose. It consists f
 Clone this repository on your local computer and switch to branch `7.1.x`. Run the `docker-compose up -d`.
 
 ```shell
-git clone git@bitbucket.org:pagach-f5/docker-compose-lamp.git &&
+git clone https://github.com/pagach/docker-compose-lamp.git &&
 chmod +x ./docker-compose-lamp/setup.sh &&
 ./docker-compose-lamp/setup.sh
 ```
