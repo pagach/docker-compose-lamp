@@ -36,7 +36,11 @@ if [ ! -f "./docker-compose-lamp/.env" ]; then
     DocumentRoot "/var/www/html/${DOCUMENT_ROOT}"
     ServerName ${PROJECT_NAME}.localhost
 	<Directory "/var/www/html/${DOCUMENT_ROOT}">
-		AllowOverride all
+		Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Order allow,deny
+    allow from all
+    Require all granted
 	</Directory>
 </VirtualHost>
 EOL
