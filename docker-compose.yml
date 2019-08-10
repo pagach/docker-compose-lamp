@@ -2,37 +2,50 @@ version: "3"
 
 services:
   webserver:
-    build: 
-      context: ./bin/webserver
-    container_name: 'png-webserver'
+    build:
+      context: ./lamp/bin/webserver
+      args:
+        USER_ID: ${USER_ID:-root}
+        GROUP_ID: ${GROUP_ID:-root}
+    container_name: '${PROJECT_NAME}-webserver'
     restart: 'always'
     ports:
       - "80:80"
       - "443:443"
-    links: 
+    links:
       - mysql
-    volumes: 
-      - ${DOCUMENT_ROOT-./www}:/var/www/html
-      - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/php.ini
-      - ${VHOSTS_DIR-./config/vhosts}:/etc/apache2/sites-enabled
-      - ${LOG_DIR-./logs/apache2}:/var/log/apache2
+    volumes:
+      - ../:/var/www/html
+      - ./lamp/config/php/php.ini:/usr/local/etc/php/php.ini
+      - ./lamp/config/vhosts:/etc/apache2/sites-enabled
+      - ./lamp/logs/apache2:/var/log/apache2
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html/${DOCUMENT_ROOT:-web}
+    networks:
+      default:
+        aliases:
+          - ${PROJECT_NAME}.localhost
+
   mysql:
-    build: ./bin/mysql
-    container_name: 'png-mysql'
+    build: ./lamp/bin/mysql
+    container_name: '${PROJECT_NAME}-5.7-mysql'
     restart: 'always'
     ports:
       - "3306:3306"
-    volumes: 
-      - ${MYSQL_DATA_DIR-./data/mysql}:/var/lib/mysql
-      - ${MYSQL_LOG_DIR-./logs/mysql}:/var/log/mysql
+    volumes:
+      - ./lamp/data/mysql:/var/lib/mysql
+      - ./lamp/logs/mysql:/var/log/mysql
+      - ./lamp/bin/mysql/init.sql:/data/application/init.sql
+    command: --init-file /data/application/init.sql
     environment:
-      MYSQL_ROOT_PASSWORD: tiger
-      MYSQL_DATABASE: png
-      MYSQL_USER: png
-      MYSQL_PASSWORD: png
+      - MYSQL_ROOT_PASSWORD=drupal
+      - MYSQL_DATABASE=drupal
+      - MYSQL_USER=drupal
+      - MYSQL_PASSWORD=drupal
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: 'png-phpmyadmin'
+    container_name: '${PROJECT_NAME}-phpmyadmin'
     links:
       - mysql
     environment:
@@ -40,10 +53,14 @@ services:
       PMA_PORT: 3306
     ports:
       - '8080:80'
-    volumes: 
+    volumes:
       - /sessions
+
   redis:
-    container_name: 'png-redis'
+    container_name: '${PROJECT_NAME}-redis'
     image: redis:latest
     ports:
       - "6379:6379"
+
+networks:
+  default:

@@ -1,34 +1,94 @@
 # LAMP stack built with Docker Compose
 
-![Landing Page](https://preview.ibb.co/gOTa0y/LAMP_STACK.png)
+Built upon https://github.com/sprintcube/docker-compose-lamp
+
+## Basic information
 
 This is a basic LAMP stack environment built using Docker Compose. It consists following:
 
-* PHP
-* Apache
-* MySQL
+* PHP 7.1
+* Apache 2.4
+* MySQL 5.7
 * phpMyAdmin
-
-As of now, we have different branches for different PHP versions. Use appropriate branch as per your php version need:
-* [5.6.x](https://github.com/sprintcube/docker-compose-lamp/tree/5.6.x)
-* [7.1.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.1.x)
-* [7.2.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.2.x)
-* [7.3.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.3.x)
 
 ## Installation
 
-Clone this repository on your local computer and checkout the appropriate branch e.g. 7.3.x. Run the `docker-compose up -d`.
+Clone this repository on your local computer and switch to branch `7.1.x`. Run the `docker-compose up -d`.
 
 ```shell
-git clone https://github.com/sprintcube/docker-compose-lamp.git
-cd docker-compose-lamp/
-git fetch --all
-git checkout 7.3.x
-docker-compose up -d
+git clone git@bitbucket.org:pagach-f5/docker-compose-lamp.git &&
+chmod +x ./docker-compose-lamp/setup.sh &&
+./docker-compose-lamp/setup.sh
 ```
 
-Your LAMP stack is now ready!! You can access it via `http://localhost`.
+After setting up your server, you can sturt it by running
 
-## Configuration and Usage
+```shell
+./docker-compose-lamp/scripts/server-start
+```
+This will stop all your existing container and build this one.
+NOTE: if using this setup in multiple projects, those will be stopped and will not be accessible, but DB changes there will not be lost.
 
-Please read from appropriate version branch.
+After server starts, access the web by clicking the link in output.
+
+## Available commands
+
+* Start server: `/docker-compose-lamp/scripts/server-start.sh`
+* SSH to container: `./docker-compose-lamp/scripts/server-ssh.sh`
+* Remove (current setup only): `./docker-compose-lamp/scripts/server-remove.sh`
+
+### Drupal 8 specific commands:
+
+* Dump database: `./docker-compose-lamp/scripts/drush-dump.sh`
+* Import database dump: `./docker-compose-lamp/scripts/drush-importdump.sh`
+
+#### Apache Modules
+
+By default following modules are enabled.
+
+* rewrite
+* headers
+
+> If you want to enable more modules, just update `./bin/webserver/Dockerfile`. You can also generate a PR and we will merge if seems good for general purpose.
+> You have to rebuild the docker image by running `docker-compose build` and restart the docker containers.
+
+## PHP
+
+The installed version of PHP is 7.1.
+
+#### Extensions
+
+By default following extensions are installed.
+
+* mysqli
+* mbstring
+* zip
+* intl
+* mcrypt
+* curl
+* json
+* iconv
+* xml
+* xmlrpc
+* gd
+
+> If you want to install more extension, just update `./bin/webserver/Dockerfile`. You can also generate a PR and we will merge if seems good for general purpose.
+> You have to rebuild the docker image by running `docker-compose build` and restart the docker containers.
+
+## phpMyAdmin
+
+phpMyAdmin is configured to run on port 8080. Use following default credentials.
+
+http://localhost:8080/  
+username: drupal  
+password: drupal
+
+## Redis
+
+It comes with Redis. It runs on default port `6379`.
+
+# TODO
+
+* Make containers run as current user - Containers are currentyl running as root and that causes all files generated in containers to be owned by root (for example configuration export or generated code with drupal console etc.).
+* Enable setting the PHP version in setup script
+* Add username and password setup steps
