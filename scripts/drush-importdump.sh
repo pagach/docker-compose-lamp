@@ -2,7 +2,7 @@
 
 cd "$(dirname "$0")"
 
-if [ ! -d "../../dumps/init.sql" ]; then
+if [ ! -f "../../dumps/init.sql.gz" ]; then
   echo "Dump file not found."
   exit 0
 fi
