@@ -13,7 +13,7 @@ This is a basic LAMP stack environment built using Docker Compose. It consists f
 
 ## Installation
 
-Clone this repository on your local computer and switch to branch `7.1.x`. Run the `docker-compose up -d`.
+To quickly install docker-compose-lamp, execute following commands from your project root:
 
 ```shell
 git clone https://github.com/pagach/docker-compose-lamp.git &&
@@ -21,7 +21,7 @@ chmod +x ./docker-compose-lamp/setup.sh &&
 ./docker-compose-lamp/setup.sh
 ```
 
-After setting up your server, you can sturt it by running
+After setting up your server, you can start it by running
 
 ```shell
 ./docker-compose-lamp/scripts/server-start
