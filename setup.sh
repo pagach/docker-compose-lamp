@@ -59,10 +59,10 @@ else
 fi
 
 printf "Available commands (execute from project root folder):\n"
-printf "Start server: ${C}./docker-compose-lamp/scripts/server-start.sh${NC}.\n"
-printf "SSH to container: ${C}./docker-compose-lamp/scripts/server-ssh.sh${NC}.\n"
-printf "Remove: ${C}./docker-compose-lamp/scripts/server-remove.sh${NC}.\n"
+printf "Start server: ${C}./docker-compose-lamp/scripts/server-start.sh${NC}\n"
+printf "SSH to container: ${C}./docker-compose-lamp/scripts/server-ssh.sh${NC}\n"
+printf "Remove: ${C}./docker-compose-lamp/scripts/server-remove.sh${NC}\n"
 
 printf "\nDrupal 8 commands (execute from project root folder):\n"
-printf "Dump database: ${C}./docker-compose-lamp/scripts/drush-dump.sh${NC}.\n"
-printf "Import database dump: ${C}./docker-compose-lamp/scripts/drush-importdump.sh${NC}.\n"
+printf "Dump database: ${C}./docker-compose-lamp/scripts/drush-dump.sh${NC}\n"
+printf "Import database dump: ${C}./docker-compose-lamp/scripts/drush-importdump.sh${NC}\n"
