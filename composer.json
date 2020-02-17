@@ -61,7 +61,7 @@
         "drupal/addtoany": "^1.10",
         "drupal/admin_toolbar": "^1.25",
         "drupal/advagg": "^4.0",
-        "drupal/bootstrap": "^3.20",
+        "drupal/bootstrap": "^3.21",
         "drupal/color_field": "^2.0",
         "drupal/config_ignore": "^2.1",
         "drupal/console": "^1.0.2",
@@ -162,6 +162,9 @@
         "patches": {
             "drupal/better_admin_tabs": {
                 "#3017678: Call to undefined function _is_admin_page()": "https://www.drupal.org/files/issues/2019-02-02/Undefined-Method-Fixed-3017678-3.patch"
+            },
+            "drupal/bootstrap": {
+                "#3065149: Uncaught TypeError: Cannot set property 'Bridge' of undefined": "https://www.drupal.org/files/issues/2019-07-04/undefined_bridge-3065149-3.patch"
             }
         }
     }
