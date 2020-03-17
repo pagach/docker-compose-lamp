@@ -24,7 +24,7 @@ chmod +x ./docker-compose-lamp/setup.sh &&
 After setting up your server, you can start it by running
 
 ```shell
-./docker-compose-lamp/scripts/server-start
+./docker-compose-lamp/scripts/server-start.sh
 ```
 This will stop all your existing container and build this one.
 NOTE: if using this setup in multiple projects, those will be stopped and will not be accessible, but DB changes there will not be lost.
