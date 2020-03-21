@@ -34,6 +34,8 @@ RUN pecl install xdebug-2.5.5 \
     && pecl install redis \
     && docker-php-ext-enable redis
 
+RUN echo "ServerName localhost" | tee /etc/apache2/conf-available/fqdn.conf && a2enconf fqdn
+
 # Enable apache modules
 RUN a2enmod rewrite headers
 
