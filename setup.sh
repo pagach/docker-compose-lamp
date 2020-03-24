@@ -50,7 +50,8 @@ EOL
   if ! grep -q "/devsetup" .gitignore;
   then
     printf "Git ignoring...\n\n"
-    echo "\n/devsetup" >> .gitignore
+    echo "" >> .gitignore #add new line
+    echo "/devsetup" >> .gitignore
   fi
 
   printf "Server created.\n\n"
