@@ -6,7 +6,7 @@ read -p "Are you sure you want to remove your server? This action can not be rev
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   echo "Removing server..."
-  cd docker-compose-lamp
+  cd devsetup
   docker-compose down -v --rmi
   cd ..
   sudo rm -rf ./devsetup
