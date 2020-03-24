@@ -9,5 +9,5 @@ then
   cd docker-compose-lamp
   docker-compose down -v --rmi
   cd ..
-  sudo rm -rf ./docker-compose-lamp
+  sudo rm -rf ./devsetup
 fi
