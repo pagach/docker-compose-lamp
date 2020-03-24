@@ -15,6 +15,12 @@ RUN apt-get -y install --fix-missing apt-utils build-essential git curl libcurl3
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# ImageMagick
+RUN apt-get update && apt-get install -y \
+    libmagickwand-dev --no-install-recommends \
+    && pecl install imagick \
+	&& docker-php-ext-enable imagick
+
 # PHP Extensions
 RUN pecl install xdebug-2.5.5 \
     && docker-php-ext-enable xdebug \
