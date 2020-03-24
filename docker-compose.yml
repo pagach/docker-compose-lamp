@@ -36,7 +36,7 @@ services:
       - ./lamp/data/mysql:/var/lib/mysql
       - ./lamp/logs/mysql:/var/log/mysql
       - ./lamp/bin/mysql/init.sql:/data/application/init.sql
-    command: --max_allowed_packet=32505856 --init-file /data/application/init.sql
+    command: --sql_mode="" --max_allowed_packet=32505856 --init-file /data/application/init.sql
     environment:
       - MYSQL_ROOT_PASSWORD=drupal
       - MYSQL_DATABASE=drupal
