@@ -16,15 +16,15 @@ This is a basic LAMP stack environment built using Docker Compose. It consists f
 To quickly install docker-compose-lamp, execute following commands from your project root:
 
 ```shell
-git clone https://github.com/pagach/docker-compose-lamp.git &&
-chmod +x ./docker-compose-lamp/setup.sh &&
-./docker-compose-lamp/setup.sh
+git clone https://github.com/pagach/docker-compose-lamp.git devsetup &&
+chmod +x ./devsetup/setup.sh &&
+./devsetup/setup.sh
 ```
 
 After setting up your server, you can start it by running
 
 ```shell
-./docker-compose-lamp/scripts/server-start.sh
+./devsetup/scripts/server-start.sh
 ```
 This will stop all your existing container and build this one.
 NOTE: if using this setup in multiple projects, those will be stopped and will not be accessible, but DB changes there will not be lost.
@@ -33,14 +33,14 @@ After server starts, access the web by clicking the link in output.
 
 ## Available commands
 
-* Start server: `/docker-compose-lamp/scripts/server-start.sh`
-* SSH to container: `./docker-compose-lamp/scripts/server-ssh.sh`
-* Remove (current setup only): `./docker-compose-lamp/scripts/server-remove.sh`
+* Start server: `/devsetup/scripts/server-start.sh`
+* SSH to container: `./devsetup/scripts/server-ssh.sh`
+* Remove (current setup only): `./devsetup/scripts/server-remove.sh`
 
 ### Drupal 8 specific commands:
 
-* Dump database: `./docker-compose-lamp/scripts/drush-dump.sh`
-* Import database dump: `./docker-compose-lamp/scripts/drush-importdump.sh`
+* Dump database: `./devsetup/scripts/drush-dump.sh`
+* Import database dump: `./devsetup/scripts/drush-importdump.sh`
 
 #### Apache Modules
 
