@@ -3,7 +3,7 @@
 C='\033[1;33m'
 NC='\033[0m' # No Color
 
-if [ ! -f "./docker-compose-lamp/.env" ]; then
+if [ ! -f "./devsetup/.env" ]; then
   printf "Welcome to docker-compose-lamp setup!\n\n"
 
   read -p "Set admin email [webmaster@localhost]: " ADMIN_EMAIL
@@ -11,7 +11,7 @@ if [ ! -f "./docker-compose-lamp/.env" ]; then
   printf "Admin email set to ${C}$ADMIN_EMAIL${NC}\n\n"
 
   DEFAULT_PROJECT_NAME=${PWD##*/}
-  cd docker-compose-lamp
+  cd devsetup
   read -p "Set project name [${DEFAULT_PROJECT_NAME}]: " PROJECT_NAME
   PROJECT_NAME=${PROJECT_NAME:-${DEFAULT_PROJECT_NAME}}
   printf "Project name set to ${C}$PROJECT_NAME${NC}\n\n"
@@ -47,10 +47,10 @@ EOL
 
   cd ..
 
-  if ! grep -q "/docker-compose-lamp" .gitignore;
+  if ! grep -q "/devsetup" .gitignore;
   then
     printf "Git ignoring...\n\n"
-    echo /docker-compose-lamp >> .gitignore
+    echo "\n/devsetup" >> .gitignore
   fi
 
   printf "Server created.\n\n"
@@ -59,10 +59,10 @@ else
 fi
 
 printf "Available commands (execute from project root folder):\n"
-printf "Start server: ${C}./docker-compose-lamp/scripts/server-start.sh${NC}\n"
-printf "SSH to container: ${C}./docker-compose-lamp/scripts/server-ssh.sh${NC}\n"
-printf "Remove: ${C}./docker-compose-lamp/scripts/server-remove.sh${NC}\n"
+printf "Start server: ${C}./devsetup/scripts/server-start.sh${NC}\n"
+printf "SSH to container: ${C}./devsetup/scripts/server-ssh.sh${NC}\n"
+printf "Remove: ${C}./devsetup/scripts/server-remove.sh${NC}\n"
 
 printf "\nDrupal 8 commands (execute from project root folder):\n"
-printf "Dump database: ${C}./docker-compose-lamp/scripts/drush-dump.sh${NC}\n"
-printf "Import database dump: ${C}./docker-compose-lamp/scripts/drush-importdump.sh${NC}\n"
+printf "Dump database: ${C}./devsetup/scripts/drush-dump.sh${NC}\n"
+printf "Import database dump: ${C}./devsetup/scripts/drush-importdump.sh${NC}\n"
