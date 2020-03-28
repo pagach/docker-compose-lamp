@@ -5,11 +5,11 @@ RUN apt-get upgrade -y
 
 # Install tools & libraries
 RUN apt-get -y install apt-utils nano wget dialog \
-    build-essential git curl libcurl3 libcurl3-dev zip
+    build-essential git curl libcurl4 libcurl4-openssl-dev zip
 
 # Install important libraries
-RUN apt-get -y install --fix-missing apt-utils build-essential git curl libcurl3 libcurl3-dev zip \
-    libmcrypt-dev libsqlite3-dev libsqlite3-0 mysql-client zlib1g-dev \
+RUN apt-get -y install --fix-missing apt-utils build-essential \
+    libsqlite3-dev libsqlite3-0 mariadb-client zlib1g-dev \
     libicu-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 
 # Composer
@@ -22,10 +22,9 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-enable imagick
 
 # PHP Extensions
-RUN pecl install xdebug-2.5.5 \
+RUN pecl install xdebug-2.6.0 \
     && docker-php-ext-enable xdebug \
     && docker-php-ext-install opcache \
-    && docker-php-ext-install mcrypt \
     && docker-php-ext-install pdo_mysql \
     && docker-php-ext-install pdo_sqlite \
     && docker-php-ext-install mysqli \
