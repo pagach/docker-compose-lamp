@@ -10,10 +10,16 @@ RUN apt-get -y install apt-utils nano wget dialog \
 # Install important libraries
 RUN apt-get -y install --fix-missing apt-utils build-essential \
     libsqlite3-dev libsqlite3-0 mariadb-client zlib1g-dev \
-    libicu-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+    libicu-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev nodejs
 
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# NodeJs and NPM
+RUN apt-get update -yq \
+    && apt-get install curl gnupg -yq \
+    && curl -sL https://deb.nodesource.com/setup_10.x | bash \
+    && apt-get install nodejs -yq
 
 # ImageMagick
 RUN apt-get update && apt-get install -y \
