@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+cd "$(dirname "$0")"
+
 C='\033[1;33m'
 NC='\033[0m' # No Color
 
-if [ ! -f "./devsetup/.env" ]; then
+if [ ! -f "./.env" ]; then
   printf "Welcome to docker-compose-lamp setup!\n\n"
 
   read -p "Set admin email [webmaster@localhost]: " ADMIN_EMAIL
@@ -22,6 +24,8 @@ if [ ! -f "./devsetup/.env" ]; then
 
   printf "Generating .env file...\n\n"
   echo "PROJECT_NAME=$PROJECT_NAME" >> .env
+  echo "DATABASE_NAME=$PROJECT_NAME" >> .env
+  echo "DATABASE_USER=$PROJECT_NAME" >> .env
 
   USER_ID=$(id -u)
   echo "USER_ID=$USER_ID" >> .env
@@ -43,6 +47,11 @@ if [ ! -f "./devsetup/.env" ]; then
     Require all granted
 	</Directory>
 </VirtualHost>
+EOL
+
+  printf "Preparing database creation script...\n\n"
+  cat > lamp/bin/mysql/init.sql << EOL
+CREATE DATABASE IF NOT EXISTS ${PROJECT_NAME} CHARACTER SET utf8 COLLATE utf8_general_ci;
 EOL
 
   cd ..
