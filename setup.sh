@@ -25,7 +25,6 @@ if [ ! -f "./.env" ]; then
   printf "Generating .env file...\n\n"
   echo "PROJECT_NAME=$PROJECT_NAME" >> .env
   echo "DATABASE_NAME=$PROJECT_NAME" >> .env
-  echo "DATABASE_USER=$PROJECT_NAME" >> .env
 
   USER_ID=$(id -u)
   echo "USER_ID=$USER_ID" >> .env
