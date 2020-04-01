@@ -80,8 +80,8 @@ By default following extensions are installed.
 phpMyAdmin is configured to run on port 8080. Use following default credentials.
 
 http://localhost:8080/  
-username: drupal  
-password: drupal
+username: root  
+password: root
 
 ## Redis
 
