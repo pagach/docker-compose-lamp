@@ -39,29 +39,29 @@ services:
       - ./lamp/bin/mysql/init.sql:/data/application/init.sql
     command: --sql_mode="" --max_allowed_packet=32505856 --init-file /data/application/init.sql
     environment:
-      - MYSQL_ROOT_PASSWORD=drupal
-      - MYSQL_DATABASE=drupal
-      - MYSQL_USER=drupal
-      - MYSQL_PASSWORD=drupal
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=${DOCUMENT_ROOT:-default}
+      - MYSQL_USER=default
+      - MYSQL_PASSWORD=default
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: '${PROJECT_NAME}-phpmyadmin'
-    links:
-      - mysql
-    environment:
-      PMA_HOST: mysql
-      PMA_PORT: 3306
-    ports:
-      - '8080:80'
-    volumes:
-      - /sessions
+#   phpmyadmin:
+#     image: phpmyadmin/phpmyadmin
+#     container_name: '${PROJECT_NAME}-phpmyadmin'
+#     links:
+#       - mysql
+#     environment:
+#       PMA_HOST: mysql
+#       PMA_PORT: 3306
+#     ports:
+#       - '8080:80'
+#     volumes:
+#       - /sessions
 
-  redis:
-    container_name: '${PROJECT_NAME}-redis'
-    image: redis:latest
-    ports:
-      - "6379:6379"
+#   redis:
+#     container_name: '${PROJECT_NAME}-redis'
+#     image: redis:latest
+#     ports:
+#       - "6379:6379"
 
 networks:
   default:
