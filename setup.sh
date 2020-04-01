@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+DEFAULT_PROJECT_NAME=${PWD##*/}
 cd "$(dirname "$0")"
 
 rm -rf .git
@@ -14,8 +14,6 @@ if [ ! -f "./.env" ]; then
   ADMIN_EMAIL=${ADMIN_EMAIL:-webmaster@localhost}
   printf "Admin email set to ${C}$ADMIN_EMAIL${NC}\n\n"
 
-  DEFAULT_PROJECT_NAME=${PWD##*/}
-  cd devsetup
   read -p "Set project name [${DEFAULT_PROJECT_NAME}]: " PROJECT_NAME
   PROJECT_NAME=${PROJECT_NAME:-${DEFAULT_PROJECT_NAME}}
   printf "Project name set to ${C}$PROJECT_NAME${NC}\n\n"
