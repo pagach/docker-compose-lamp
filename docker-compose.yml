@@ -40,7 +40,7 @@ services:
     command: --sql_mode="" --max_allowed_packet=32505856 --init-file /data/application/init.sql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=${DOCUMENT_ROOT:-default}
+      - MYSQL_DATABASE=default
       - MYSQL_USER=default
       - MYSQL_PASSWORD=default
 
