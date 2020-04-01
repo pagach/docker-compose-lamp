@@ -24,7 +24,9 @@ if [ ! -f "./.env" ]; then
 
   printf "Generating .env file...\n\n"
   echo "PROJECT_NAME=$PROJECT_NAME" >> .env
-  echo "DATABASE_NAME=$PROJECT_NAME" >> .env
+  echo "DATABASE_NAME=devsetup_db" >> .env
+  echo "DATABASE_USER=devsetup_db" >> .env
+  echo "DATABASE_PASSWORD=devsetup_db" >> .env
 
   USER_ID=$(id -u)
   echo "USER_ID=$USER_ID" >> .env
@@ -46,11 +48,6 @@ if [ ! -f "./.env" ]; then
     Require all granted
 	</Directory>
 </VirtualHost>
-EOL
-
-  printf "Preparing database creation script...\n\n"
-  cat > lamp/bin/mysql/init.sql << EOL
-CREATE DATABASE IF NOT EXISTS ${PROJECT_NAME} CHARACTER SET utf8 COLLATE utf8_general_ci;
 EOL
 
   cd ..
