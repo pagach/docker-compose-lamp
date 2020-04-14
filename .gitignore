@@ -2,5 +2,4 @@
 lamp/data
 lamp/logs
 lamp/config/vhosts/default.conf
-lamp/bin/mysql/init.sql
 .env
