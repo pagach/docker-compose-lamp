@@ -28,9 +28,9 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-enable imagick
 
 # PHP Extensions
-RUN pecl install xdebug-2.6.0 \
-    && docker-php-ext-enable xdebug \
-    && docker-php-ext-install opcache \
+#RUN pecl install xdebug-2.6.0 \
+#    && docker-php-ext-enable xdebug \
+RUN docker-php-ext-install opcache \
     && docker-php-ext-install pdo_mysql \
     && docker-php-ext-install pdo_sqlite \
     && docker-php-ext-install mysqli \
