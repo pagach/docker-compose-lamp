@@ -1,11 +1,11 @@
-FROM php:7.2.29-apache
+FROM php:7.3.18-apache
 
 RUN apt-get -y update --fix-missing
 RUN apt-get upgrade -y
 
 # Install tools & libraries
 RUN apt-get -y install apt-utils nano wget dialog \
-    build-essential git curl libcurl4 libcurl4-openssl-dev zip
+    build-essential git curl libcurl4 libcurl4-openssl-dev libzip-dev zip
 
 # Install important libraries
 RUN apt-get -y install --fix-missing apt-utils build-essential \
