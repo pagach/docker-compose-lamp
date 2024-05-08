@@ -6,7 +6,7 @@ Built upon https://github.com/sprintcube/docker-compose-lamp
 
 This is a basic LAMP stack environment built using Docker Compose. It consists following:
 
-* PHP 7.1
+* PHP 8.3
 * Apache 2.4
 * MySQL 5.7
 * phpMyAdmin
@@ -52,10 +52,6 @@ By default following modules are enabled.
 > If you want to enable more modules, just update `./bin/webserver/Dockerfile`. You can also generate a PR and we will merge if seems good for general purpose.
 > You have to rebuild the docker image by running `docker-compose build` and restart the docker containers.
 
-## PHP
-
-The installed version of PHP is 7.1.
-
 #### Extensions
 
 By default following extensions are installed.
@@ -79,8 +75,8 @@ By default following extensions are installed.
 
 phpMyAdmin is configured to run on port 8080. Use following default credentials.
 
-http://localhost:8080/  
-username: root  
+http://localhost:8080/
+username: root
 password: root
 
 ## Redis
@@ -89,6 +85,5 @@ It comes with Redis. It runs on default port `6379`.
 
 # TODO
 
-* Make containers run as current user - Containers are currentyl running as root and that causes all files generated in containers to be owned by root (for example configuration export or generated code with drupal console etc.).
 * Enable setting the PHP version in setup script
 * Add username and password setup steps
