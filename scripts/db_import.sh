@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd "$(dirname "$0")"
+cd "$(dirname "$0")" || exit
 
 if [ ! -f "../../dumps/init.sql.gz" ]; then
   echo "Dump file not found."
@@ -12,7 +12,5 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
   source "../.env"
   cd ..
-  docker exec -it $PROJECT_NAME-webserver sh -c './vendor/bin/drush sql-drop -y &&
-    echo "Importing init dump..." &&
-    zcat ./dumps/init.sql.gz | ./vendor/bin/drush sqlc'
+  docker exec -it $PROJECT_NAME-webserver mysql -h mysql -u root -proot devsetup_db < dump.sql
 fi

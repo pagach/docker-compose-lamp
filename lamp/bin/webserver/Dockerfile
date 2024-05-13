@@ -1,5 +1,9 @@
 FROM php:8.3.6-apache
 
+#Run apache as root to avoid file permissions issues
+RUN sed -i 's/APACHE_RUN_USER=www-data/APACHE_RUN_USER=root/g' /etc/apache2/envvars
+RUN sed -i 's/APACHE_RUN_GROUP=www-data/APACHE_RUN_GROUP=root/g' /etc/apache2/envvars
+
 RUN apt-get -y update --fix-missing
 RUN apt-get upgrade -y
 
