@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 DEFAULT_PROJECT_NAME=${PWD##*/}
 cd "$(dirname "$0")"
 

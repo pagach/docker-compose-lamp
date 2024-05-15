@@ -1,0 +1,7 @@
+[mysqld]
+innodb_buffer_pool_size = 256M
+query_cache_size = 0  # Query cache should be off for MySQL 5.7+
+query_cache_type = 0
+max_connections = 150
+table_open_cache = 2000
+thread_cache_size = 10

@@ -14,7 +14,7 @@ services:
     links:
       - mysql
     volumes:
-      - ../:/var/www/html
+      - ~/f5-projects/${PROJECT_NAME}:/var/www/html
       - ./lamp/config/php/php.ini:/usr/local/etc/php/php.ini
       - ./lamp/config/vhosts:/etc/apache2/sites-enabled
       - ./lamp/logs/apache2:/var/log/apache2
@@ -42,25 +42,37 @@ services:
       - MYSQL_DATABASE=devsetup_db
       - MYSQL_USER=devsetup_db
       - MYSQL_PASSWORD=devsetup_db
+    networks:
+      default:
+        aliases:
+          - ${PROJECT_NAME}.localhost
 
-#   phpmyadmin:
-#     image: phpmyadmin/phpmyadmin
-#     container_name: '${PROJECT_NAME}-phpmyadmin'
-#     links:
-#       - mysql
-#     environment:
-#       PMA_HOST: mysql
-#       PMA_PORT: 3306
-#     ports:
-#       - '8080:80'
-#     volumes:
-#       - /sessions
+#    phpmyadmin:
+#        image: phpmyadmin/phpmyadmin
+#        container_name: '${PROJECT_NAME}-phpmyadmin'
+#        links:
+#            - mysql
+#        environment:
+#            PMA_HOST: mysql
+#            PMA_PORT: 3306
+#        ports:
+#            - '8080:80'
+#        volumes:
+#            - /sessions
+#        networks:
+#            default:
+#                aliases:
+#                    - ${PROJECT_NAME}.localhost
 
-#   redis:
-#     container_name: '${PROJECT_NAME}-redis'
-#     image: redis:latest
-#     ports:
-#       - "6379:6379"
+#    redis:
+#        container_name: '${PROJECT_NAME}-redis'
+#        image: redis:latest
+#        ports:
+#            - "6379:6379"
+#    networks:
+#        default:
+#            aliases:
+#                - ${PROJECT_NAME}.localhost
 
 networks:
   default:
