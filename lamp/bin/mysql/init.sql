@@ -11,7 +11,7 @@
  Target Server Version : 50744
  File Encoding         : 65001
 
- Date: 13/05/2024 23:51:46
+ Date: 15/05/2024 21:38:42
 */
 
 SET NAMES utf8mb4;
@@ -139,11 +139,6 @@ CREATE TABLE `attribute`  (
 -- ----------------------------
 INSERT INTO `attribute` VALUES (81, 140, 'id', NULL, 'CoreUserEntity', 'static', 'user_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'integer', 'integer', NULL, 'Id', NULL, 1, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, 'a73ad0606f1cb6d577389ed6280849bd', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (82, 140, 'username', NULL, 'CoreUserEntity', 'varchar', 'user_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Username', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, '36e4f7f7cf430ec9032f68926b07e159', NULL, NULL, 0, NULL);
-INSERT INTO `attribute` VALUES (139, 149, 'id', NULL, 'NoteEntity', 'static', 'note_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'integer', 'integer', NULL, 'Id', NULL, 1, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, '19fa0df629a69c0661cb8081ce681d2a', NULL, NULL, 0, NULL);
-INSERT INTO `attribute` VALUES (140, 149, 'comment', NULL, 'NoteEntity', 'text', 'note_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'textarea', 'textarea', '', 'Comment', '', 0, 1, 1, 1, 1, '', NULL, 0, '', 0, '', 0, '', 0, 0, 0, 0, 0, NULL, 'd77a8be131ddf08afeabd2d41fa3924a', NULL, NULL, 0, NULL);
-INSERT INTO `attribute` VALUES (141, 149, 'related_entity_type', NULL, 'NoteEntity', 'varchar', 'note_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', '', 'Related Entity Type', '', 1, 1, 1, 1, 1, '', NULL, 0, '', 0, '', 0, '', 0, 0, 0, 0, 0, NULL, '3fb0d16a46fe238881b2514d11c76e2d', NULL, NULL, 0, NULL);
-INSERT INTO `attribute` VALUES (142, 149, 'related_entity_id', NULL, 'NoteEntity', 'integer', 'note_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'integer', 'integer', '', 'Related Entity ID', '', 1, 1, 1, 1, 1, '', NULL, 0, NULL, 0, '', 0, '', 0, 0, 0, 0, 0, NULL, '14c0d6460a6f285196abf4a9c331fa44', NULL, NULL, 0, NULL);
-INSERT INTO `attribute` VALUES (143, 149, 'user_id', NULL, 'NoteEntity', 'lookup', 'note_entity', NULL, 140, 12, 82, NULL, 'default', 'autocomplete', 'lookup', '', 'user', '', 0, 1, 1, 1, 1, '', NULL, 0, '', 0, '', 0, '', 0, 0, 0, 0, 0, NULL, '7bea5a45501021eed4f7c1b4238a6d20', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (174, 140, 'first_name', NULL, 'CoreUserEntity', 'varchar', 'user_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'First name', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, 'a23f081ccf59e93afc23430e9d1533e5', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (175, 140, 'last_name', NULL, 'CoreUserEntity', 'varchar', 'user_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Last name', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, 'cd05e1e8ecd658bd42875d4f8d33f3c9', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (176, 140, 'full_name', NULL, 'CoreUserEntity', 'varchar', 'user_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Full name', NULL, 0, 0, 0, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, 'e0bd50c2a16591d485b2a72a0dce0706', NULL, NULL, 0, NULL);
@@ -169,10 +164,6 @@ INSERT INTO `attribute` VALUES (1159, 340, 'refresh_token', NULL, 'ApiAccessEnti
 INSERT INTO `attribute` VALUES (1160, 340, 'token', NULL, 'ApiAccessEntity', 'varchar', 'api_access_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', '', 'Token', '', 0, 1, 1, 1, 1, '', NULL, 0, '[{\"type\":\"notempty\",\"message\":\"Please fill in this field\"}]', 0, '', 0, '', 0, 0, 0, 0, 0, NULL, 'cf14f1fc371d7112e1312668ce2833c7', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (1161, 340, 'date_valid', NULL, 'ApiAccessEntity', 'datetime', 'api_access_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'datetimesingle', 'datetime', '', 'Date valid', '', 0, 1, 1, 1, 1, '', NULL, 0, '', 0, '', 0, '', 0, 0, 0, 0, 0, NULL, '233f4f2daba076d1296c79298c8f57eb', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (1162, 340, 'date_last_access', NULL, 'ApiAccessEntity', 'datetime', 'api_access_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'datetimesingle', 'datetime', '', 'Last access', '', 0, 1, 1, 1, 1, '', NULL, 0, '', 0, '', 0, '', 0, 0, 0, 0, 0, NULL, '1d5379fe9808902bb6dc3be93897478b', NULL, NULL, 0, NULL);
-INSERT INTO `attribute` VALUES (2111, 496, 'id', NULL, 'NoteUserLikeEntity', 'static', 'note_user_like_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'integer', 'integer', NULL, 'Id', NULL, 1, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '2e46ec9848444674a721cfd15bc181f9', NULL, NULL, 0, NULL);
-INSERT INTO `attribute` VALUES (2112, 496, 'name', NULL, 'NoteUserLikeEntity', 'varchar', 'note_user_like_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Name', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, '[{\"type\":\"notempty\",\"message\":\"Please fill in this field\"}]', 0, NULL, 0, NULL, 0, 0, 0, 0, NULL, NULL, 'd04141bf9f98aff1e8ef197f19fe78b5', NULL, NULL, 0, NULL);
-INSERT INTO `attribute` VALUES (2113, 496, 'note_id', NULL, 'NoteUserLikeEntity', 'lookup', 'note_user_like_entity', NULL, 149, 21, 139, NULL, 'default', 'autocomplete', 'lookup', '', 'note', '', 0, 1, 1, 1, 1, '', NULL, 0, '', 0, '', 0, '', 0, 0, 0, 0, 0, NULL, '2962f21bdfcd628961461b423c532160', NULL, NULL, 0, NULL);
-INSERT INTO `attribute` VALUES (2114, 496, 'user_id', NULL, 'NoteUserLikeEntity', 'lookup', 'note_user_like_entity', NULL, 140, 12, 81, NULL, 'default', 'autocomplete', 'lookup', '', 'user', '', 0, 1, 1, 1, 1, '', NULL, 0, '', 0, '', 0, '', 0, 0, 0, 0, 0, NULL, '4822dd965c7acc5a27de849c68a1bfc2', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (2597, 140, 'color', NULL, 'CoreUserEntity', 'varchar', 'user_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'color_picker', 'color_picker', NULL, 'Color', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, '7e86ac1a5bbeb2745a47da8c84459578', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (2648, 570, 'id', NULL, 'TransactionEmailEntity', 'static', 'transaction_email_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Id', NULL, 1, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '78d5a136b99481c91685521db3728d70', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (2649, 570, 'content', NULL, 'TransactionEmailEntity', 'text', 'transaction_email_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'textarea', 'textarea', '', 'Content', '', 0, 1, 1, 1, 1, '', NULL, 0, '', 0, '', 0, '', 0, 0, 0, 0, 0, NULL, '9b57a005053706a9f7ec075b6b437303', NULL, NULL, 0, NULL);
@@ -286,15 +277,6 @@ INSERT INTO `attribute` VALUES (5973, 744, 'send_email', NULL, 'ImportManualType
 INSERT INTO `attribute` VALUES (5974, 744, 'email_template_code', NULL, 'ImportManualTypeEntity', 'varchar', 'import_manual_type_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Email template code', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, '6469d85d4bdc48.27160640', NULL, NULL, 0, 0);
 INSERT INTO `attribute` VALUES (5975, 826, 'is_custom', NULL, 'TranslationEntity', 'bool', 'translation_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'checkbox', 'checkbox', NULL, 'Is custom', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, '646f77827b6871.74278949', NULL, NULL, 0, 0);
 INSERT INTO `attribute` VALUES (6031, 255, 'is_active', NULL, 'CoreLanguageEntity', 'bool', 'core_language_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'checkbox', 'checkbox', NULL, 'Is active', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, '1', 0, NULL, 0, 0, 0, 0, 0, NULL, '64886f9aa91f70.14272414', NULL, NULL, 0, 0);
-INSERT INTO `attribute` VALUES (6074, 831, 'id', NULL, 'RecordingEntity', 'static', 'recording_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Id', NULL, 1, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '64bbe8ab321984.60129923', NULL, NULL, 0, 0);
-INSERT INTO `attribute` VALUES (6075, 831, 'name', NULL, 'RecordingEntity', 'varchar', 'recording_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Name', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, '[{\"type\":\"notempty\",\"message\":\"Please fill in this field\"}]', 0, NULL, 0, NULL, 0, 0, 0, 0, NULL, NULL, '64bbe8ab4de8f6.46181082', NULL, NULL, 0, 0);
-INSERT INTO `attribute` VALUES (6076, 831, 'file', NULL, 'RecordingEntity', 'varchar', 'recording_entity', '/Documents/recording/', NULL, NULL, NULL, NULL, NULL, 'file', 'file', NULL, 'File', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '64bbe8ab64c020.32590358', NULL, NULL, 0, 0);
-INSERT INTO `attribute` VALUES (6077, 831, 'file_source', NULL, 'RecordingEntity', 'varchar', 'recording_entity', '/Documents/recording/', NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Source', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '64bbe8ab7c3751.24709891', NULL, NULL, 0, 0);
-INSERT INTO `attribute` VALUES (6078, 831, 'filename', NULL, 'RecordingEntity', 'varchar', 'recording_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Filename', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '64bbe8ab936a19.46837704', NULL, NULL, 0, 0);
-INSERT INTO `attribute` VALUES (6079, 831, 'file_type', NULL, 'RecordingEntity', 'varchar', 'recording_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'File type', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '64bbe8abaa2b77.95387596', NULL, NULL, 0, 0);
-INSERT INTO `attribute` VALUES (6080, 831, 'size', NULL, 'RecordingEntity', 'varchar', 'recording_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Size', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '64bbe8abc036a5.19360192', NULL, NULL, 0, 0);
-INSERT INTO `attribute` VALUES (6081, 831, 'core_user_id', NULL, 'RecordingEntity', 'lookup', 'recording_entity', NULL, 140, 12, 82, NULL, 'default', 'autocomplete', 'lookup', NULL, 'Core user', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, '64bbf2f8781e15.70993586', NULL, NULL, 0, 0);
-INSERT INTO `attribute` VALUES (6082, 831, 'transcript', NULL, 'RecordingEntity', 'text', 'recording_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'textarea', 'textarea', NULL, 'Transcript', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, '64bbf31f45b632.31498325', NULL, NULL, 0, 0);
 INSERT INTO `attribute` VALUES (6186, 847, 'id', NULL, 'ImageStyleEntity', 'static', 'image_style_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Id', NULL, 1, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '2fc92a748599d5199a66bb5684e021af', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (6187, 847, 'convert_to_webp', NULL, 'ImageStyleEntity', 'bool', 'image_style_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'checkbox', 'checkbox', NULL, 'Convert to WebP', NULL, 0, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, '601d253fe61af4.41455665', NULL, NULL, 0, NULL);
 INSERT INTO `attribute` VALUES (6188, 845, 'id', NULL, 'ResponsiveImageStyleEntity', 'static', 'responsive_image_style_entity', NULL, NULL, NULL, NULL, NULL, NULL, 'text', 'text', NULL, 'Id', NULL, 1, 1, 1, 1, 1, NULL, NULL, 0, NULL, 0, NULL, 0, NULL, 0, 0, 0, 1, NULL, NULL, '601ed03394d110.15816369', NULL, NULL, 0, NULL);
@@ -337,13 +319,11 @@ CREATE TABLE `attribute_group`  (
 -- Records of attribute_group
 -- ----------------------------
 INSERT INTO `attribute_group` VALUES (21, 12, 'User details', 0, 0, '528d4cc2e6513b25945c39ef1702037e', 1, NULL);
-INSERT INTO `attribute_group` VALUES (37, 21, 'note details', 0, 0, '7c6c2c2e9be48b0b45c0f6519cdd48b8', 0, NULL);
 INSERT INTO `attribute_group` VALUES (64, 45, 'role details', 0, 0, '825ec561dfad57a0413c343bf3dc90f5', 0, NULL);
 INSERT INTO `attribute_group` VALUES (66, 47, 'core_user_role_link details', 0, 0, '8739cebfe67033136cd4e99ba0583521', 0, NULL);
 INSERT INTO `attribute_group` VALUES (162, 127, 'core_language details', 0, 0, 'd3c76102c81fcc42957ac8cb087bdac9', 0, NULL);
 INSERT INTO `attribute_group` VALUES (169, 134, 'ckeditor details', 0, 0, 'ca8d9652cdb138b919a7c046e2d463f7', 0, NULL);
 INSERT INTO `attribute_group` VALUES (229, 185, 'api access details', 0, 0, '46702d1ad28a985018b7fc7d56a716ac', 0, NULL);
-INSERT INTO `attribute_group` VALUES (397, 340, 'note user like details', 0, 0, '6e42dbbf52377363b6fe0b9bd6db0234', 0, NULL);
 INSERT INTO `attribute_group` VALUES (491, 416, 'transaction email', 0, 0, 'a6fd0de136e59c0571e9147ade9b9186', 0, NULL);
 INSERT INTO `attribute_group` VALUES (613, 513, 'cron job', 0, 0, '60313b8b7fe8e4.53621216', 0, NULL);
 INSERT INTO `attribute_group` VALUES (614, 514, 'cron job history', 0, 0, '60313badaf4f14.87399396', 0, NULL);
@@ -358,7 +338,6 @@ INSERT INTO `attribute_group` VALUES (719, 612, 'error log', 0, 0, '6173dd98e1fb
 INSERT INTO `attribute_group` VALUES (751, 641, 'transaction email sent', 0, 0, '6291ff343e32d4.29410995', 0, NULL);
 INSERT INTO `attribute_group` VALUES (782, 612, 'Stack trace', 0, 0, '63c492778a6ee9.94705332', 0, NULL);
 INSERT INTO `attribute_group` VALUES (807, 679, 'translation', 0, 0, '646281980af902.17519863', 0, NULL);
-INSERT INTO `attribute_group` VALUES (815, 684, 'recording', 0, 0, '64bbe8aac4d8d0.85660547', 0, NULL);
 INSERT INTO `attribute_group` VALUES (831, 700, 'image style', 0, 0, '5de6ec6f98073b76fbbde0577cbe75a2', 0, NULL);
 INSERT INTO `attribute_group` VALUES (832, 698, 'responsive image style', 0, 0, '601ed0336f0428.98351648', 0, NULL);
 INSERT INTO `attribute_group` VALUES (833, 699, 'responsive image style link', 0, 0, '601ed07fc68041.01193802', 0, NULL);
@@ -386,13 +365,11 @@ CREATE TABLE `attribute_set`  (
 -- Records of attribute_set
 -- ----------------------------
 INSERT INTO `attribute_set` VALUES (12, 140, 'core_user', 'user', 0, '372f428f10fb67546945658cf91cc518', 0);
-INSERT INTO `attribute_set` VALUES (21, 149, 'note', 'note', 0, 'cbba21e0bd38a62f3a1bbbbced482700', 0);
 INSERT INTO `attribute_set` VALUES (45, 173, 'role', 'role', 0, '4e0cdb878325d53ad79a74504bf97a96', 0);
 INSERT INTO `attribute_set` VALUES (47, 175, 'core_user_role_link', 'core_user_role_link', 0, '94e55e6d63870013445b947871dc97e2', 0);
 INSERT INTO `attribute_set` VALUES (127, 255, 'core_language', 'core_language', 0, 'ddfbf37abf8f194116203ebc606acfa4', 0);
 INSERT INTO `attribute_set` VALUES (134, 262, 'ckeditor', 'ckeditor', 0, '5fab1187e829691e86a131a7aa7615c3', 0);
 INSERT INTO `attribute_set` VALUES (185, 340, 'api_access', 'api_access', 0, '991d904cc1110f889be28ad88b84de34', 0);
-INSERT INTO `attribute_set` VALUES (340, 496, 'note_user_like', 'note_user_like', 0, '5a5d54fb1322fa17ec5018ba278862be', 0);
 INSERT INTO `attribute_set` VALUES (416, 570, 'transaction_email', 'transaction_email', 0, 'c16b399bc91d42b88b49c6c13b792bca', 0);
 INSERT INTO `attribute_set` VALUES (513, 660, 'cron_job', 'cron_job', 0, '60313b8ab10523.96719248', 0);
 INSERT INTO `attribute_set` VALUES (514, 661, 'cron_job_history', 'cron_job_history', 0, '60313bad22bb56.99730792', 0);
@@ -405,7 +382,6 @@ INSERT INTO `attribute_set` VALUES (599, 746, 'entity_log_view', 'entity_log_vie
 INSERT INTO `attribute_set` VALUES (612, 759, 'error_log', 'error_log', 0, '6173dd98ba1956.70793972', 0);
 INSERT INTO `attribute_set` VALUES (641, 788, 'transaction_email_sent', 'transaction_email_sent', 0, '6291ff34214c08.83551231', 0);
 INSERT INTO `attribute_set` VALUES (679, 826, 'translation', 'translation', 0, '64628197cd7551.36813755', 0);
-INSERT INTO `attribute_set` VALUES (684, 831, 'recording', 'recording', 0, '64bbe8aa7a59c4.09771470', 0);
 INSERT INTO `attribute_set` VALUES (698, 845, 'responsive_image_style', 'responsive_image_style', 0, '601ed0334d85a7.35236148', 0);
 INSERT INTO `attribute_set` VALUES (699, 846, 'responsive_image_style_link', 'responsive_image_style_link', 0, '601ed07fa67060.87747240', 0);
 INSERT INTO `attribute_set` VALUES (700, 847, 'image_style', 'image_style', 0, 'c023dbf13a1beed4153675efeb899239', 0);
@@ -574,11 +550,6 @@ CREATE TABLE `entity_attribute`  (
 -- ----------------------------
 -- Records of entity_attribute
 -- ----------------------------
-INSERT INTO `entity_attribute` VALUES (202, 149, 21, 37, 139, 0);
-INSERT INTO `entity_attribute` VALUES (203, 149, 21, 37, 140, 0);
-INSERT INTO `entity_attribute` VALUES (204, 149, 21, 37, 141, 0);
-INSERT INTO `entity_attribute` VALUES (205, 149, 21, 37, 142, 0);
-INSERT INTO `entity_attribute` VALUES (206, 149, 21, 37, 143, 0);
 INSERT INTO `entity_attribute` VALUES (340, 173, 45, 64, 269, 0);
 INSERT INTO `entity_attribute` VALUES (341, 173, 45, 64, 270, 0);
 INSERT INTO `entity_attribute` VALUES (343, 175, 47, 66, 272, 0);
@@ -596,10 +567,6 @@ INSERT INTO `entity_attribute` VALUES (1428, 340, 185, 229, 1159, 0);
 INSERT INTO `entity_attribute` VALUES (1429, 340, 185, 229, 1160, 0);
 INSERT INTO `entity_attribute` VALUES (1430, 340, 185, 229, 1161, 0);
 INSERT INTO `entity_attribute` VALUES (1431, 340, 185, 229, 1162, 0);
-INSERT INTO `entity_attribute` VALUES (2438, 496, 340, 397, 2111, 0);
-INSERT INTO `entity_attribute` VALUES (2439, 496, 340, 397, 2112, 0);
-INSERT INTO `entity_attribute` VALUES (2440, 496, 340, 397, 2113, 0);
-INSERT INTO `entity_attribute` VALUES (2441, 496, 340, 397, 2114, 0);
 INSERT INTO `entity_attribute` VALUES (4205, 660, 513, 613, 4162, 0);
 INSERT INTO `entity_attribute` VALUES (4206, 660, 513, 613, 4163, 0);
 INSERT INTO `entity_attribute` VALUES (4207, 660, 513, 613, 4166, 0);
@@ -669,13 +636,6 @@ INSERT INTO `entity_attribute` VALUES (11246, 826, 679, 807, 5967, 1);
 INSERT INTO `entity_attribute` VALUES (11247, 826, 679, 807, 5968, 2);
 INSERT INTO `entity_attribute` VALUES (11248, 826, 679, 807, 5969, 3);
 INSERT INTO `entity_attribute` VALUES (11249, 826, 679, 807, 5975, 4);
-INSERT INTO `entity_attribute` VALUES (11327, 831, 684, 815, 6074, 0);
-INSERT INTO `entity_attribute` VALUES (11328, 831, 684, 815, 6075, 0);
-INSERT INTO `entity_attribute` VALUES (11329, 831, 684, 815, 6076, 0);
-INSERT INTO `entity_attribute` VALUES (11330, 831, 684, 815, 6077, 0);
-INSERT INTO `entity_attribute` VALUES (11331, 831, 684, 815, 6078, 0);
-INSERT INTO `entity_attribute` VALUES (11332, 831, 684, 815, 6079, 0);
-INSERT INTO `entity_attribute` VALUES (11333, 831, 684, 815, 6080, 0);
 INSERT INTO `entity_attribute` VALUES (11442, 255, 127, 162, 753, 1);
 INSERT INTO `entity_attribute` VALUES (11443, 255, 127, 162, 754, 2);
 INSERT INTO `entity_attribute` VALUES (11444, 255, 127, 162, 755, 3);
@@ -1010,13 +970,11 @@ CREATE TABLE `entity_type`  (
 -- Records of entity_type
 -- ----------------------------
 INSERT INTO `entity_type` VALUES (140, 'core_user', 'CoreUserEntity', NULL, 'user_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'AppBundle', '<one-to-many field=\"contacts\" target-entity=\"CrmBusinessBundle\\Entity\\ContactEntity\"  mapped-by=\"coreUser\">   <cascade>\r\n        <cascade-all/>\r\n    </cascade>\r\n</one-to-many>\r\n', 'public  $contacts;\r\n\r\n    /**\r\n     * @return mixed\r\n     */\r\n    public function getContacts()\r\n    {\r\n        return $this->contacts;\r\n    }\r\n\r\npublic function getDefaultContact(){\r\n\r\n        $contacts = $this->contacts;\r\n        if(!$this->isCountable($contacts) || count($contacts) < 1){\r\n            return null;\r\n        }\r\n        \r\n        foreach ($contacts as $contact){\r\n            if($contact->getEntityStateId() == 1){\r\n                return $contact;\r\n            }\r\n        }\r\n        \r\n        return null;\r\n    }\r\n    \r\n    public function getDefaultAccount(){\r\n\r\n        $contacts = $this->contacts;\r\n        if(!$this->isCountable($contacts) || count($contacts) < 1){\r\n            return null;\r\n        }\r\n        \r\n        foreach ($contacts as $contact){\r\n            if($contact->getEntityStateId() == 1){\r\n                return $contact->getAccount();\r\n            }\r\n        }\r\n        \r\n        return null;\r\n    }', '', '', 0, NULL, 0, '6077b3a28c9dea849357a446531dc832', 0, 0, 1, 0, NULL);
-INSERT INTO `entity_type` VALUES (149, 'note', 'NoteEntity', NULL, 'note_entity', NULL, 'id', 1, 'default', 0, '', 0, 8, '0', '', NULL, 1, NULL, 'AppBundle', '<one-to-many field=\"userLikes\" target-entity=\"AppBundle\\Entity\\NoteUserLikeEntity\" mapped-by=\"note\">\r\n	<cascade>\r\n        <cascade-all/>\r\n    </cascade>\r\n</one-to-many>', 'public $userLikes;\r\n\r\n    /**\r\n     * @return mixed\r\n     */\r\n    public function getUserLikes()\r\n    {\r\n        return $this->userLikes;\r\n    }', '', '', 0, NULL, 0, 'aad653ca3ee669635f2938b73098b6d7', 1, 0, 0, NULL, NULL);
 INSERT INTO `entity_type` VALUES (173, 'role', 'RoleEntity', NULL, 'role_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'AppBundle', '<one-to-many target-entity=\"AppBundle\\Entity\\Privilege\" mapped-by=\"role\"\r\n                     field=\"privileges\" fetch=\"EAGER\" orphan-removal=\"true\">\r\n            <cascade>\r\n                <cascade-persist/>\r\n            </cascade>\r\n        </one-to-many>', 'private $privileges;\r\n    /**\r\n     * @return mixed\r\n     */\r\n    public function getPrivileges()\r\n    {\r\n        return $this->privileges;\r\n    }\r\n\r\n    /**\r\n     * @param mixed $privileges\r\n     */\r\n    public function setPrivileges($privileges)\r\n    {\r\n        $this->privileges = $privileges;\r\n    }', NULL, NULL, 0, NULL, 0, '29a7e96467b69a9f5a93332e29e9b0de', 1, 0, 0, 1, NULL);
 INSERT INTO `entity_type` VALUES (175, 'core_user_role_link', 'CoreUserRoleLinkEntity', NULL, 'user_role_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'AppBundle', NULL, NULL, NULL, NULL, 1, NULL, 0, '0762c740fa25051721a7f73f35285aed', 0, 0, 0, 0, NULL);
 INSERT INTO `entity_type` VALUES (255, 'core_language', 'CoreLanguageEntity', NULL, 'core_language_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'AppBundle', NULL, NULL, NULL, NULL, 0, 0, 0, '357fde5236de74c2b299bdd5f5dc9b8c', 1, 0, 0, 1, NULL);
 INSERT INTO `entity_type` VALUES (262, 'ckeditor', 'CkeditorEntity', NULL, 'ckeditor_entity', NULL, 'id', 1, 'default', 0, '', 0, 8, '0', '', NULL, 1, NULL, 'AppBundle', '', '', '', '', 0, 1, 0, '55ec7732cc4d2d985134a433fa86a610', 1, 0, 0, NULL, NULL);
 INSERT INTO `entity_type` VALUES (340, 'api_access', 'ApiAccessEntity', NULL, 'api_access_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'AppBundle', NULL, NULL, NULL, NULL, 0, 0, 0, 'd918bfe14b6f2558a77d5f72abbc42ad', 0, 0, 0, NULL, NULL);
-INSERT INTO `entity_type` VALUES (496, 'note_user_like', 'NoteUserLikeEntity', NULL, 'note_user_like_entity', NULL, 'id', 1, 'default', 0, '', 0, 8, '0', '', NULL, 1, NULL, 'AppBundle', '', '', '', '', 0, 0, 0, 'e44de106bfa9340364d170b425fcaa51', 1, 0, 0, NULL, NULL);
 INSERT INTO `entity_type` VALUES (570, 'transaction_email', 'TransactionEmailEntity', NULL, 'transaction_email_entity', NULL, 'id', 1, 'default', 0, '', 0, 8, '0', '', NULL, 1, NULL, 'AppBundle', '', '', '', '', 0, 0, 0, 'f312d6a0a53779cdc80aafaaa8206719', 0, 0, 0, NULL, NULL);
 INSERT INTO `entity_type` VALUES (660, 'cron_job', 'CronJobEntity', NULL, 'cron_job_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'AppBundle', NULL, NULL, NULL, NULL, 0, 0, 0, '60313b8aa50705.66286611', 0, 0, 0, 0, NULL);
 INSERT INTO `entity_type` VALUES (661, 'cron_job_history', 'CronJobHistoryEntity', NULL, 'cron_job_history_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'AppBundle', NULL, NULL, NULL, NULL, 0, 0, 0, '60313bad1af612.24711553', 0, 0, 0, 0, NULL);
@@ -1029,7 +987,6 @@ INSERT INTO `entity_type` VALUES (746, 'entity_log_view', 'EntityLogViewEntity',
 INSERT INTO `entity_type` VALUES (759, 'error_logs', 'ErrorLogEntity', NULL, 'error_log_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'AppBundle', NULL, NULL, NULL, NULL, 0, 0, 0, '6173dd98ae2b68.42168239', 0, 0, 0, 0, NULL);
 INSERT INTO `entity_type` VALUES (788, 'transaction_email_sent', 'TransactionEmailSentEntity', NULL, 'transaction_email_sent_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, NULL, NULL, 'AppBundle', NULL, NULL, NULL, NULL, 0, 0, 0, '6291ff3417c9a9.17460361', 0, 0, 0, 0, NULL);
 INSERT INTO `entity_type` VALUES (826, 'translation', 'TranslationEntity', NULL, 'translation_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, NULL, NULL, 'AppBundle', NULL, NULL, NULL, NULL, 0, 0, 0, '64628197acc7b1.77576882', 0, 0, 0, 0, NULL);
-INSERT INTO `entity_type` VALUES (831, 'recording', 'RecordingEntity', NULL, 'recording_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, NULL, NULL, 'AppBundle', NULL, NULL, NULL, NULL, 0, 1, 0, '64bbe8aa5e9162.04887667', 0, 0, 0, 0, NULL);
 INSERT INTO `entity_type` VALUES (845, 'responsive_image_style', 'ResponsiveImageStyleEntity', NULL, 'responsive_image_style_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'ImageOptimizationBusinessBundle', NULL, NULL, NULL, NULL, 0, 0, 0, '601ed033437822.99003632', 0, 0, 0, 0, NULL);
 INSERT INTO `entity_type` VALUES (846, 'responsive_image_style_link', 'ResponsiveImageStyleLinkEntity', NULL, 'responsive_image_style_link_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'ImageOptimizationBusinessBundle', NULL, NULL, NULL, NULL, 0, 0, 0, '601ed07f9cf127.18011818', 0, 0, 0, 0, NULL);
 INSERT INTO `entity_type` VALUES (847, 'image_style', 'ImageStyleEntity', NULL, 'image_style_entity', NULL, 'id', 1, 'default', 0, NULL, 0, 8, '0', NULL, NULL, 1, NULL, 'ImageOptimizationBusinessBundle', NULL, NULL, NULL, NULL, 0, 0, 0, 'b5e342b63ed5ce5ec02cfcee10cd7199', 0, 0, 0, 1, NULL);
@@ -1281,7 +1238,6 @@ INSERT INTO `list_view` VALUES (29, 'role', 173, 45, 'Role', '', 269, 'asc', 1, 
 INSERT INTO `list_view` VALUES (97, 'core_language', 255, 127, 'Core_language', '', 753, 'asc', 1, 50, 1, 0, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3},\r\n{\"type\":\"button\",\"name\":\"Regenerate\",\"class\":\"\",\"url\":\"regenerate_translation\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":1},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":1}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\"}', '', 0, 'ddfbf37abf8f194116203ebc606acfa4', 'AppBundle', 0, '', NULL, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (104, 'ckeditor', 262, 134, 'Ckeditor', NULL, 848, 'asc', 1, 50, 1, NULL, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":1}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\"}', NULL, NULL, '5fab1187e829691e86a131a7aa7615c3', 'AppBundle', 0, NULL, NULL, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (161, 'api_access', 340, 185, 'Api access', NULL, 1157, 'asc', 1, 50, 1, NULL, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', NULL, NULL, '991d904cc1110f889be28ad88b84de34', 'AppBundle', 0, NULL, NULL, 0, 0, NULL);
-INSERT INTO `list_view` VALUES (295, 'note_user_like', 496, 340, 'Note user like', NULL, 2112, 'asc', 1, 50, 1, NULL, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', NULL, NULL, '5a5d54fb1322fa17ec5018ba278862be', 'CrmBusinessBundle', 0, NULL, NULL, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (379, 'transaction_email', 570, 416, 'Transaction email', NULL, 2650, 'asc', 1, 50, 1, 0, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', NULL, 0, 'c16b399bc91d42b88b49c6c13b792bca', 'CrmBusinessBundle', 0, NULL, 0, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (475, 'cron_job', 660, 513, 'Cron job', NULL, 3753, 'asc', 1, 50, 1, 0, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', NULL, 0, '60313b8d2237f7.48870400', 'AppBundle', 0, NULL, 0, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (476, 'cron_job_history', 661, 514, 'Cron job history', NULL, 4173, 'desc', 1, 50, 1, 0, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', NULL, 0, '60313baecab7c5.52965217', 'AppBundle', 0, NULL, 0, 0, 0, NULL);
@@ -1298,7 +1254,6 @@ INSERT INTO `list_view` VALUES (697, 'transaction_email_sent_order', 788, 641, '
 INSERT INTO `list_view` VALUES (719, 'entity_log_view_by_entity', 746, 599, 'Entity log by id', '[{\"connector\":\"and\",\"filters\":[{\"field\":\"entityId\",\"operation\":\"eq\",\"value\":\"{id}\"},{\"field\":\"entityAttributeSet\",\"operation\":\"eq\",\"value\":\"{parentEntity}.attributeSet.attributeSetCode\"}]}]', 5063, 'desc', 1, 50, 0, 0, NULL, NULL, NULL, NULL, 0, '6422b83b1905a6.50268665', 'AppBundle', 0, '[]', 1, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (720, 'cron_job_history_per_cron_job', 661, 514, 'Cron job history', '[{\"connector\":\"and\",\"filters\":[{\"field\":\"cronJob.id\",\"operation\":\"eq\",\"value\":\"{id}\"}]}]', 4164, 'desc', 1, 50, 1, 0, NULL, NULL, NULL, NULL, 0, '6425fb1dbcc9c1.27713267', 'AppBundle', 0, '[]', 0, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (728, 'translation', 826, 679, 'Translation', NULL, 5875, 'asc', 1, 50, 1, 0, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', '[{\"type\":\"button\",\"name\":\"Save translation to default\",\"class\":\"\",\"url\":\"save_translations_to_default\",\"action\":\"standard_mass_action\",\"actionType\":4,\"callback\":\"[\\\"massRemoveSelected\\\",\\\"refreshList\\\"]\",\"confirm\":\"true\"}]', 0, '646281988228b7.17136868', 'AppBundle', 0, '[]', 0, 0, 0, NULL);
-INSERT INTO `list_view` VALUES (737, 'recording', 831, 684, 'Recording', NULL, 4367, 'asc', 1, 50, 1, NULL, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', NULL, NULL, '64bbe8abeb02c3.60426183', 'AppBundle', 0, NULL, NULL, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (758, 'responsive_image_style', 845, 698, 'Responsive image style', NULL, 3902, 'asc', 1, 50, 1, 0, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', NULL, 0, '601ed033b328b5.81795276', 'ImageOptimizationBusinessBundle', 0, NULL, 0, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (759, 'responsive_image_style_styles', 846, 699, 'Responsive image style styles', '[{\"connector\":\"and\", \"filters\":[{\"field\":\"responsiveImageStyle.id\",\"operation\":\"eq\",\"value\":\"{id}\"}]}]', 3903, 'asc', 1, 50, 0, 0, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', '[{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"mass_delete\",\"action\":\"standard_mass_action\",\"actionType\":4,\"callback\":\"[\\\"massRemoveSelected\\\",\\\"refreshList\\\"]\",\"confirm\":\"true\"}]', 0, '601ed9062546e5.76912280', 'ImageOptimizationBusinessBundle', 0, NULL, 1, 0, 0, NULL);
 INSERT INTO `list_view` VALUES (760, 'image_style', 847, 700, 'Image style', NULL, 2490, 'asc', 1, 50, 1, 0, '{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"}', '[{\"type\":\"link\",\"name\":\"Edit\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"\",\"actionType\":3,\"form_type\":\"form\"},{\"type\":\"button\",\"name\":\"Delete\",\"class\":\"\",\"url\":\"delete\",\"action\":\"standard_grid_action\",\"actionType\":4,\"confirm\":\"true\"}]', '{\"type\":\"button\",\"name\":\"View\",\"class\":\"\",\"url\":\"page_view\",\"action\":\"standard_row_action\",\"actionType\":2,\"confirm\":\"false\",\"form_type\":\"view\"}', NULL, 0, 'c023dbf13a1beed4153675efeb899239', 'ImageOptimizationBusinessBundle', 0, NULL, 0, 0, 0, NULL);
@@ -1335,7 +1290,6 @@ INSERT INTO `list_view_attribute` VALUES (448, 97, 754, 'code', 'Code', 1, 2, NU
 INSERT INTO `list_view_attribute` VALUES (449, 97, 755, 'name', 'Name', 1, 3, NULL, 0, 0);
 INSERT INTO `list_view_attribute` VALUES (478, 104, 848, 'id', 'Id', 1, 1, NULL, 0, 0);
 INSERT INTO `list_view_attribute` VALUES (701, 161, 1157, 'id', 'Id', 1, 1, NULL, 0, 0);
-INSERT INTO `list_view_attribute` VALUES (959, 295, 2112, 'name', 'Name', 1, 1, NULL, 0, 0);
 INSERT INTO `list_view_attribute` VALUES (1839, 475, 4162, 'id', 'Id', 1, 1, '', 0, 0);
 INSERT INTO `list_view_attribute` VALUES (1840, 475, 4166, 'schedule', 'Schedule', 1, 2, '', 0, 0);
 INSERT INTO `list_view_attribute` VALUES (1841, 475, 4163, 'name', 'Name', 1, 3, '', 0, 0);
@@ -1410,7 +1364,6 @@ INSERT INTO `list_view_attribute` VALUES (3572, 720, 5728, 'cronBatchId', 'Cron 
 INSERT INTO `list_view_attribute` VALUES (3588, 728, 5967, 'id', 'Id', 1, 1, '', 0, 1);
 INSERT INTO `list_view_attribute` VALUES (3589, 728, 5968, 'translationKey', 'Translation key', 1, 2, '', 0, 1);
 INSERT INTO `list_view_attribute` VALUES (3590, 728, 5969, 'translationValue', 'Translation value', 1, 3, '', 0, 1);
-INSERT INTO `list_view_attribute` VALUES (3642, 737, 6075, 'name', 'Name', 1, 1, NULL, 0, NULL);
 INSERT INTO `list_view_attribute` VALUES (3673, 606, 4813, 'id', 'Id', 1, 1, '', 0, 0);
 INSERT INTO `list_view_attribute` VALUES (3674, 606, 4820, 'importManualType.name', 'Name', 1, 2, '', 0, 0);
 INSERT INTO `list_view_attribute` VALUES (3675, 606, 4822, 'importManualStatus.name', 'Name', 1, 3, '', 0, 0);
@@ -1487,8 +1440,6 @@ INSERT INTO `navigation_link` VALUES (1397, 60, 'Role Form', NULL, NULL, 0, 999,
 INSERT INTO `navigation_link` VALUES (1406, 310, 'Api access', NULL, NULL, 0, 999, '/page/api_access/list', 14, 1, '_self', 'AppBundle', '21e5e865de5d60942679e5cb39f098a8', 0);
 INSERT INTO `navigation_link` VALUES (1407, 311, 'Api access form', NULL, NULL, 0, 999, '/page/api_access/form', 135, 1, '_self', 'AppBundle', 'd26a6b861f5c0e4e058a1e328a2a8aeb', 0);
 INSERT INTO `navigation_link` VALUES (1660, 208, 'Core language', NULL, NULL, 0, 8, '/page/core_language/list', 22, 1, '_self', 'AppBundle', '0eefe30bb31306d8b94daa1b8b31b8c2', 0);
-INSERT INTO `navigation_link` VALUES (1675, 568, 'Note user like', NULL, NULL, 0, 999, '/page/note_user_like/list', 11, 1, '_self', 'CrmBusinessBundle', '128151631b5512450c7e1cb44b33ffb2', 0);
-INSERT INTO `navigation_link` VALUES (1676, 569, 'Note user like form', NULL, NULL, 0, 999, '/page/note_user_like/form', 103, 1, '_self', 'CrmBusinessBundle', '5b41d35c0fe1034f39a0db3f68efab74', 0);
 INSERT INTO `navigation_link` VALUES (1710, NULL, 'Bundles', NULL, NULL, 0, 8, '/administrator/bundle', NULL, 1, '_self', 'AppBundle', '16f2691c669f7271717350baa6c9c3dd', 0);
 INSERT INTO `navigation_link` VALUES (1801, 694, 'Transaction email', NULL, NULL, 0, 2051, '/page/transaction_email/list', 10, 1, '_self', 'AppBundle', '588d8738e581de55635c62d1aa1d5840', 1);
 INSERT INTO `navigation_link` VALUES (1802, 695, 'Transaction email form', NULL, NULL, 0, 999, '/page/transaction_email/form', 53, 1, '_self', 'AppBundle', '52bdcd6ea814e9bd11d200eb256c5e4f', 0);
@@ -1511,73 +1462,10 @@ INSERT INTO `navigation_link` VALUES (2212, 1086, 'Error log form', NULL, NULL, 
 INSERT INTO `navigation_link` VALUES (2269, 1138, 'Transaction email sent form', NULL, NULL, 0, 999, '/page/transaction_email_sent/form', NULL, 1, '_self', 'AppBundle', '6291ff35476ca6.19046031', 0);
 INSERT INTO `navigation_link` VALUES (2346, 1213, 'Translation', NULL, NULL, 0, 2050, '/page/translation/list', 10, 1, '_self', 'AppBundle', '64628199304e52.43856705', 0);
 INSERT INTO `navigation_link` VALUES (2347, 1214, 'Translation form', NULL, NULL, 0, 999, '/page/translation/form', NULL, 1, '_self', 'AppBundle', '64628199b6e5f6.30910621', 0);
-INSERT INTO `navigation_link` VALUES (2359, 1224, 'Recording', NULL, NULL, 0, 999, '/page/recording/list', 10, 1, '_self', 'AppBundle', '64bbe8ace859e8.31515870', 0);
-INSERT INTO `navigation_link` VALUES (2360, 1225, 'Recording form', NULL, NULL, 0, 999, '/page/recording/form', NULL, 1, '_self', 'AppBundle', '64bbe8adb70369.40887533', 0);
 INSERT INTO `navigation_link` VALUES (2388, 1257, 'Image style form', NULL, NULL, 0, 999, '/page/image_style/form', 76, 1, '_self', 'ImageOptimizationBusinessBundle', '33b28b49363cf1c92855967d2d70978a', 0);
 INSERT INTO `navigation_link` VALUES (2389, 1254, 'Responsive image style form', NULL, NULL, 0, 999, '/page/responsive_image_style/form', NULL, 1, '_self', 'ImageOptimizationBusinessBundle', '601ed0348996f1.64704654', 0);
 INSERT INTO `navigation_link` VALUES (2390, 1255, 'Responsive image style styles', NULL, NULL, 0, 999, '/page/responsive_image_style_link/list', 17, 1, '_self', 'ImageOptimizationBusinessBundle', '601ee12c6985a2.11705781', 0);
 INSERT INTO `navigation_link` VALUES (2391, 1256, 'Responsive image style link form', NULL, NULL, 0, 999, '/page/responsive_image_style_link/form', NULL, 1, '_self', 'ImageOptimizationBusinessBundle', '601ee12cbd4854.34031552', 0);
-
--- ----------------------------
--- Table structure for note_entity
--- ----------------------------
-DROP TABLE IF EXISTS `note_entity`;
-CREATE TABLE `note_entity`  (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `entity_type_id` smallint(5) UNSIGNED NOT NULL,
-  `attribute_set_id` smallint(5) UNSIGNED NOT NULL,
-  `created` datetime(0) NOT NULL,
-  `modified` datetime(0) NOT NULL,
-  `entity_state_id` smallint(5) UNSIGNED NULL DEFAULT NULL,
-  `comment` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
-  `related_entity_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `related_entity_id` int(10) UNSIGNED NULL DEFAULT NULL,
-  `user_id` int(10) UNSIGNED NULL DEFAULT NULL,
-  `created_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `modified_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `version` int(10) UNSIGNED NULL DEFAULT NULL,
-  `min_version` int(10) UNSIGNED NULL DEFAULT NULL,
-  `locked` datetime(0) NULL DEFAULT NULL,
-  `locked_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `5075cab000f940c391f3e283ef847a2e`(`user_id`) USING BTREE,
-  CONSTRAINT `note_entity_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user_entity` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of note_entity
--- ----------------------------
-
--- ----------------------------
--- Table structure for note_user_like_entity
--- ----------------------------
-DROP TABLE IF EXISTS `note_user_like_entity`;
-CREATE TABLE `note_user_like_entity`  (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `entity_type_id` smallint(5) UNSIGNED NOT NULL,
-  `attribute_set_id` smallint(5) UNSIGNED NOT NULL,
-  `created` datetime(0) NOT NULL,
-  `modified` datetime(0) NOT NULL,
-  `locked` datetime(0) NULL DEFAULT NULL,
-  `locked_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `modified_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `created_by` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `version` int(10) UNSIGNED NULL DEFAULT NULL,
-  `min_version` int(10) UNSIGNED NULL DEFAULT NULL,
-  `entity_state_id` smallint(5) UNSIGNED NULL DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `note_id` int(10) UNSIGNED NULL DEFAULT NULL,
-  `user_id` int(10) UNSIGNED NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `note_user_like_entity_note_id`(`note_id`) USING BTREE,
-  INDEX `acb2c30999903d0d24e24d7b0b8d109a`(`user_id`) USING BTREE,
-  CONSTRAINT `note_user_like_entity_ibfk_1` FOREIGN KEY (`note_id`) REFERENCES `note_entity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `note_user_like_entity_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user_entity` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of note_user_like_entity
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for page
@@ -1623,8 +1511,6 @@ INSERT INTO `page` VALUES (218, 'Ckeditor Form', 'ckeditor', 'form', '[{\"title\
 INSERT INTO `page` VALUES (248, 'User profile', 'user_profile', 'form', '[{\"id\":\"f6388f22e501a4f758b0f9518beb753c\",\"type\":\"google_authenticator\",\"title\":\"Multi-Factor Authentication\",\"x\":0,\"y\":0,\"width\":12,\"height\":5}]', 140, 12, NULL, NULL, '2019-05-28 11:12:43', '2020-02-08 21:16:48', NULL, '2fab3dbeb84560f437ef267651c7e57c', 'AppBundle', 0);
 INSERT INTO `page` VALUES (310, 'Api access', 'api_access', 'list', '[{\"title\":\"Api access\",\"height\":2,\"width\":12,\"id\":\"c99e5a57de89fb27b0b7d4f0e5596a59\",\"x\":0,\"y\":2,\"type\":\"list_view\"}]', 340, 185, NULL, NULL, '2019-08-23 00:46:07', '2020-02-08 21:17:23', NULL, '6e5e8c6896c28077416025c8f2f766a0', 'AppBundle', 0);
 INSERT INTO `page` VALUES (311, 'Api access form', 'api_access', 'form', '[{\"title\":\"Api access form\",\"height\":5,\"width\":12,\"id\":\"0b0540b8dfe845d988d6638d71f5d8fc\",\"x\":0,\"y\":2,\"type\":\"edit_form\"}]', 340, 185, NULL, NULL, '2019-08-23 00:46:13', '2020-02-08 21:17:23', '[{\"type\":\"button\",\"name\":\"Save\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"return\"},{\"type\":\"button\",\"name\":\"Save and continue\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"continue\"},{\"type\":\"link\",\"name\":\"Back\",\"class\":\"btn-default btn-red\",\"url\":\"\",\"action\":\"back\"}]', '4ee086bf1a4e9ca57492b79395a6e5fe', 'AppBundle', 0);
-INSERT INTO `page` VALUES (568, 'Note user like', 'note_user_like', 'list', '[{\"title\":\"Note user like\",\"height\":2,\"width\":12,\"id\":\"455192aac19a0d0c5520c95deff1c882\",\"x\":0,\"y\":2,\"type\":\"list_view\"}]', 496, 340, NULL, NULL, '2020-02-03 15:37:20', '2020-02-08 21:17:38', NULL, 'e55196d9fe3d5d34b7779dd689f4fc63', 'CrmBusinessBundle', 0);
-INSERT INTO `page` VALUES (569, 'Note user like form', 'note_user_like', 'form', '[{\"title\":\"Note user like form\",\"height\":5,\"width\":12,\"id\":\"4a7c827b0a2369054cc297746a4bbb74\",\"x\":0,\"y\":2,\"type\":\"edit_form\"}]', 496, 340, NULL, NULL, '2020-02-03 15:37:21', '2020-02-08 21:17:38', '[{\"type\":\"button\",\"name\":\"Save\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"return\"},{\"type\":\"button\",\"name\":\"Save and continue\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"continue\"},{\"type\":\"link\",\"name\":\"Back\",\"class\":\"btn-default btn-red\",\"url\":\"\",\"action\":\"back\"}]', '563ef993e55bda7465bd2dad9086f084', 'CrmBusinessBundle', 0);
 INSERT INTO `page` VALUES (694, 'Transaction email', 'transaction_email', 'list', '[{\"title\":\"Transaction email\",\"height\":2,\"width\":12,\"id\":\"c215e2b8cbc855b235f5b7febbdbc32c\",\"x\":0,\"y\":2,\"type\":\"list_view\"}]', 570, 416, NULL, NULL, '2020-05-05 22:06:32', '2020-05-05 22:06:32', NULL, '5490034ea0e35702971bb6e8836f045c', 'AppBundle', 0);
 INSERT INTO `page` VALUES (695, 'Transaction email form', 'transaction_email', 'form', '[{\"id\":\"052eda03f4cb96d194a38c0a79ab00f6\",\"type\":\"edit_form\",\"title\":\"Transaction email form\",\"x\":0,\"y\":0,\"width\":12,\"height\":10}]', 570, 416, NULL, NULL, '2020-05-05 22:06:32', '2020-05-05 22:06:32', NULL, 'bb346820529a7a784f3b6e8e4708541e', 'AppBundle', 0);
 INSERT INTO `page` VALUES (900, 'Cron job', 'cron_job', 'list', '[{\"title\":\"Cron job\",\"height\":2,\"width\":12,\"id\":\"60313b8e05daa2.59280485\",\"x\":0,\"y\":2,\"type\":\"list_view\"}]', 660, 513, NULL, NULL, '2021-02-20 16:40:46', '2021-03-22 00:59:55', NULL, '60313b8ebe4d99.68574082', 'AppBundle', 0);
@@ -1645,8 +1531,6 @@ INSERT INTO `page` VALUES (1137, 'Transaction email sent', 'transaction_email_se
 INSERT INTO `page` VALUES (1138, 'Transaction email sent form', 'transaction_email_sent', 'form', '[{\"id\":\"6291ff35078512.69358073\",\"type\":\"edit_form\",\"title\":\"Transaction email sent form\",\"x\":0,\"y\":0,\"width\":12,\"height\":6}]', 788, 641, NULL, NULL, '2022-05-28 12:53:41', '2022-05-28 12:53:41', '[{\"type\":\"button\",\"name\":\"Save\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"return\"},{\"type\":\"button\",\"name\":\"Save and continue\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"continue\"},{\"type\":\"link\",\"name\":\"Back\",\"class\":\"btn-default btn-red\",\"url\":\"\",\"action\":\"back\"}]', '6291ff352a9640.67751829', 'AppBundle', 0);
 INSERT INTO `page` VALUES (1213, 'Translation', 'translation', 'list', '[{\"title\":\"Translation\",\"height\":2,\"width\":12,\"id\":\"64628198c1bf55.16578810\",\"x\":0,\"y\":2,\"type\":\"list_view\"}]', 826, 679, NULL, NULL, '2023-05-15 21:01:44', '2023-05-15 21:01:44', NULL, '64628198f19173.98696979', 'AppBundle', 0);
 INSERT INTO `page` VALUES (1214, 'Translation form', 'translation', 'form', '[{\"title\":\"Translation form\",\"height\":5,\"width\":12,\"id\":\"64628199532281.34332537\",\"x\":0,\"y\":2,\"type\":\"edit_form\"}]', 826, 679, NULL, NULL, '2023-05-15 21:01:45', '2023-05-15 21:01:45', '[{\"type\":\"button\",\"name\":\"Save\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"return\"},{\"type\":\"button\",\"name\":\"Save and continue\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"continue\"},{\"type\":\"link\",\"name\":\"Back\",\"class\":\"btn-default btn-red\",\"url\":\"\",\"action\":\"back\"}]', '64628199895dd2.30036329', 'AppBundle', 0);
-INSERT INTO `page` VALUES (1224, 'Recording', 'recording', 'list', '[{\"title\":\"Recording\",\"height\":2,\"width\":12,\"id\":\"64bbe8ac4e1f41.39474799\",\"x\":0,\"y\":2,\"type\":\"list_view\"}]', 831, 684, NULL, NULL, '2023-07-22 16:33:16', '2023-07-22 16:33:16', NULL, '64bbe8ac991962.89876424', 'AppBundle', 0);
-INSERT INTO `page` VALUES (1225, 'Recording form', 'recording', 'form', '[{\"title\":\"Recording form\",\"height\":5,\"width\":12,\"id\":\"64bbe8ad199508.72560610\",\"x\":0,\"y\":2,\"type\":\"edit_form\"}]', 831, 684, NULL, NULL, '2023-07-22 16:33:17', '2023-07-22 16:33:17', '[{\"type\":\"button\",\"name\":\"Save\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"return\"},{\"type\":\"button\",\"name\":\"Save and continue\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"continue\"},{\"type\":\"link\",\"name\":\"Back\",\"class\":\"btn-default btn-red\",\"url\":\"\",\"action\":\"back\"}]', '64bbe8ad709156.36691424', 'AppBundle', 0);
 INSERT INTO `page` VALUES (1253, 'Responsive image style', 'responsive_image_style', 'list', '[{\"id\":\"601ed033d9e9d5.27439938\",\"type\":\"list_view\",\"title\":\"Responsive image style\",\"x\":0,\"y\":0,\"width\":12,\"height\":2}]', 845, 698, NULL, NULL, '2021-02-06 17:21:56', '2021-02-06 17:21:56', NULL, '601ed03405b9e6.33103848', 'ImageOptimizationBusinessBundle', 0);
 INSERT INTO `page` VALUES (1254, 'Responsive image style form', 'responsive_image_style', 'form', '[{\"id\":\"601ed034419b37.89118740\",\"type\":\"edit_form\",\"title\":\"Responsive image style form\",\"x\":0,\"y\":0,\"width\":12,\"height\":6},{\"id\":\"601ed7d5732437.94153806\",\"type\":\"list_view\",\"title\":\"Responsive image style styles\",\"x\":0,\"y\":6,\"width\":12,\"height\":4}]', 845, 698, NULL, NULL, '2021-02-06 17:21:56', '2021-02-06 17:21:56', '[{\"type\":\"button\",\"name\":\"Save\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"return\"},{\"type\":\"button\",\"name\":\"Save and continue\",\"class\":\"btn-primary btn-blue\",\"url\":\"\",\"action\":\"continue\"},{\"type\":\"link\",\"name\":\"Back\",\"class\":\"btn-default btn-red\",\"url\":\"\",\"action\":\"back\"}]', '601ed0346919f4.61387355', 'ImageOptimizationBusinessBundle', 0);
 INSERT INTO `page` VALUES (1255, 'Responsive image style styles', 'responsive_image_style_link', 'list', '[{\"title\":\"Responsive image style styles\",\"height\":2,\"width\":12,\"id\":\"601ed7d5732437.94153806\",\"x\":0,\"y\":2,\"type\":\"list_view\"}]', 846, 699, NULL, NULL, '2021-02-06 18:34:20', '2021-02-06 18:34:20', NULL, '601ee12c44d467.16253356', 'ImageOptimizationBusinessBundle', 0);
@@ -1697,7 +1581,6 @@ INSERT INTO `page_block` VALUES (126, 'Users List', 'list_view', '{\"allowViewSe
 INSERT INTO `page_block` VALUES (128, 'Role List', 'list_view', NULL, NULL, NULL, 29, 173, 45, '2018-06-24 12:41:39', '2020-02-08 21:16:38', 'AppBundle', 'fe0e219eea98e544924045b9a4afac6a', 'e82151bcaea2ebb39ee50f968dd91b6e', 0);
 INSERT INTO `page_block` VALUES (129, 'Role Form', 'role_form', '[{\"id\":\"125d61bbb8fdc16900530900a11ac618\",\"type\":\"attribute_group\",\"title\":\"Details\",\"x\":0,\"y\":0,\"width\":12,\"height\":2}]', NULL, NULL, NULL, 173, 45, '2018-06-24 12:41:39', '2020-02-08 21:17:45', 'AppBundle', '11fc8736d8b5e2c7347fcac971369743', 'd9c48606836dd657908531078d344586', 0);
 INSERT INTO `page_block` VALUES (130, 'Core_user Role', 'multiselect', '{\"link_entity\":\"core_user_role_link\",\"parent_entity\":\"core_user\",\"child_entity\":\"role\",\"attribute_id\":\"4847\",\"mandatory\":\"0\"}', NULL, NULL, 66, 140, 47, '2018-06-24 14:40:44', '2018-06-24 14:40:44', 'AppBundle', '730757b14f4c17dcb1a0523fe0490dd7', 'ac9dec51fa01577fb46fbd730ec012c7', 0);
-INSERT INTO `page_block` VALUES (357, 'Notes', 'notes', NULL, NULL, NULL, NULL, 149, 21, '2018-09-24 11:50:14', '2020-02-08 21:17:44', 'AppBundle', '6445b7f311e6ced8acb897560bff18dd', 'b0cead2e75aecb5e2ad13fef99eadf28', 0);
 INSERT INTO `page_block` VALUES (418, 'Account info', 'custom_html', '{\"html\":\"eyUgaWYgZW50aXR5LmFjY291bnQuaXNMZWdhbEVudGl0eSAlfQ0KICAgIDxoMz57eyBlbnRpdHkuYWNjb3VudC5uYW1lIH19PHNwYW4gY2xhc3M9InB1bGwtcmlnaHQiPnt7IGVudGl0eS5hY2NvdW50LmFjY291bnRSYXRpbmcubmFtZSB9fTwvc3Bhbj48L2gzPg0KICAgIDxkaXYgY2xhc3M9InJvdyBmb3JtLWdyb3VwIj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY29sLXNtLTQiPkFjY291bnQgT3duZXI8L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY29sLXNtLTkiPlBlcm8gUGVyacSHPC9kaXY+DQogICAgPC9kaXY+DQogICAgPGRpdiBjbGFzcz0icm93IGZvcm0tZ3JvdXAiPg0KICAgICAgICA8ZGl2IGNsYXNzPSJjb2wtc20tMyI+SW5kdXN0cnk8L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY29sLXNtLTkiPnt7IGVudGl0eS5hY2NvdW50LmluZHVzdHJ5VHlwZS5uYW1lIH19PC9kaXY+DQogICAgPC9kaXY+DQogICAgPGRpdiBjbGFzcz0icm93IGZvcm0tZ3JvdXAiPg0KICAgICAgICA8ZGl2IGNsYXNzPSJjb2wtc20tMyI+U2l6ZTwvZGl2Pg0KICAgICAgICA8ZGl2IGNsYXNzPSJjb2wtc20tOSI+DQogICAgICAgICAgICB7JSBpZiBlbnRpdHkuYWNjb3VudC5lbXBsb3llZXM8MTAgJX0NCiAgICAgICAgICAgICAgICBTbWFsbA0KICAgICAgICAgICAgeyUgZWxzZSAlfQ0KICAgICAgICAgICAgICAgIE1lZGl1bQ0KICAgICAgICAgICAgeyUgZW5kaWYgJX0NCiAgICAgICAgPC9kaXY+DQogICAgPC9kaXY+DQogICAgPGRpdiBjbGFzcz0icm93IGZvcm0tZ3JvdXAiPg0KICAgICAgICA8ZGl2IGNsYXNzPSJjb2wtc20tMyI+T0lCPC9kaXY+DQogICAgICAgIDxkaXYgY2xhc3M9ImNvbC1zbS05Ij57eyBlbnRpdHkuYWNjb3VudC5vaWIgfX08L2Rpdj4NCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGNsYXNzPSJyb3cgZm9ybS1ncm91cCI+DQogICAgICAgIDxkaXYgY2xhc3M9ImNvbC1zbS0zIj5NYWluIENvbnRhY3Q8L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY29sLXNtLTkiPnt7IGVudGl0eS5hY2NvdW50Lm5hbWUgfX08L2Rpdj4NCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGNsYXNzPSJyb3cgZm9ybS1ncm91cCI+DQogICAgICAgIDxkaXYgY2xhc3M9ImNvbC1zbS05IGNvbC1zbS1vZmZzZXQtMyI+PGEgaHJlZj0idGVsOnt7IGVudGl0eS5hY2NvdW50LnBob25lIH19Ij48aQ0KICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3M9ImZhIGZhLXBob25lIj48L2k+IHt7IGVudGl0eS5hY2NvdW50LnBob25lIH19PC9kaXY+DQogICAgPC9kaXY+DQogICAgPGRpdiBjbGFzcz0icm93IGZvcm0tZ3JvdXAiPg0KICAgICAgICA8ZGl2IGNsYXNzPSJjb2wtc20tOSBjb2wtc20tb2Zmc2V0LTMiPjxhIGhyZWY9Im1haWx0bzp7eyBlbnRpdHkuYWNjb3VudC5lbWFpbCB8ZGVmYXVsdCgnJyl9fSI+PGkNCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzPSJmYSBmYS1lbnZlbG9wZSI+PC9pPiB7eyBlbnRpdHkuYWNjb3VudC5lbWFpbCB9fTwvYT48L2Rpdj4NCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGNsYXNzPSJyb3cgZm9ybS1ncm91cCI+DQogICAgICAgIDxkaXYgY2xhc3M9ImNvbC1zbS05IGNvbC1zbS1vZmZzZXQtMyI+PGEgaHJlZj0iLy97eyBlbnRpdHkuYWNjb3VudC53ZWIgfX0iIHRhcmdldD0iX2JsYW5rIj48aQ0KICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3M9ImZhIGZhLWdsb2JlIj48L2k+IHt7IGVudGl0eS5hY2NvdW50LndlYiB9fTwvYT48L2Rpdj4NCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGNsYXNzPSJyb3cgZm9ybS1ncm91cCI+DQogICAgICAgIDxkaXYgY2xhc3M9ImNvbC1zbS0zIj5FbXBsb3llZXM8L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY29sLXNtLTkiPnt7IGVudGl0eS5hY2NvdW50LmVtcGxveWVlcyB9fTwvZGl2Pg0KICAgIDwvZGl2Pg0KDQp7JSBlbHNlICV9DQogICAgPGgzPnt7IGVudGl0eS5hY2NvdW50TmFtZSB9fTwvaDM+DQogICAgPGRpdiBjbGFzcz0icm93IGZvcm0tZ3JvdXAiPg0KICAgICAgICA8ZGl2IGNsYXNzPSJjb2wtc20tNSI+QWNjb3VudCBPd25lcjo8L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY29sLXNtLTciPnt7IGVudGl0eS5vd25lci5mdWxsX25hbWV9fTwvZGl2Pg0KICAgIDwvZGl2Pg0KICAgIDxkaXYgY2xhc3M9InJvdyBmb3JtLWdyb3VwIj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY29sLXNtLTUiPk1haW4gQ29udGFjdDo8L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY29sLXNtLTciPnt7IGVudGl0eS5hY2NvdW50Lm5hbWUgfX08L2Rpdj4NCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGNsYXNzPSJyb3cgZm9ybS1ncm91cCI+DQogICAgICAgIDxkaXYgY2xhc3M9ImNvbC1zbS0xMiBjb2wtc20tb2Zmc2V0LTUiPjxhIGhyZWY9InRlbDp7eyBlbnRpdHkuYWNjb3VudC5waG9uZSB9fSI+PGkNCiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzPSJmYSBmYS1waG9uZSI+PC9pPiB7eyBlbnRpdHkuYWNjb3VudC5waG9uZSB9fTwvZGl2Pg0KICAgIDwvZGl2Pg0KICAgIDxkaXYgY2xhc3M9InJvdyBmb3JtLWdyb3VwIj4NCiAgICAgICAgPGRpdiBjbGFzcz0iY29sLXNtLTEyIGNvbC1zbS1vZmZzZXQtNSI+PGEgaHJlZj0ibWFpbHRvOnt7IGVudGl0eS5hY2NvdW50LmVtYWlsIH19Ij48aQ0KICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3M9ImZhIGZhLWVudmVsb3BlIj48L2k+IHt7IGVudGl0eS5hY2NvdW50LmVtYWlsIHxkZWZhdWx0KCcnKX19PC9hPjwvZGl2Pg0KICAgIDwvZGl2Pg0KeyUgZW5kaWYgJX0NCg==\"}', NULL, NULL, 18, NULL, NULL, '2018-10-17 09:18:56', '2019-05-23 16:22:29', 'CrmBusinessBundle', '2aa43bba4edff2060e9716053621bc08', 'b8e2b8375e2058679e0eb9fe2b06ab80', 0);
 INSERT INTO `page_block` VALUES (430, 'Client', 'account_creation', NULL, NULL, NULL, NULL, NULL, NULL, '2018-10-17 09:33:43', '2020-02-08 21:16:41', 'CrmBusinessBundle', '10edb77e150ab2ef0ac3e433b428cc46', '230ae8090fc28d5a79421a1c5bfc01fe', 0);
 INSERT INTO `page_block` VALUES (575, 'Sale', 'custom_html', '{\"html\":\"YXNk\"}', NULL, NULL, NULL, NULL, NULL, '2018-11-20 10:53:06', '2020-02-08 21:16:41', 'CrmBusinessBundle', '93ea73747a0f48f7b973906208d52b91', '230ae8090fc28d5a79421a1c5bfc01fe', 0);
@@ -1721,10 +1604,6 @@ INSERT INTO `page_block` VALUES (931, 'Container', 'container', NULL, NULL, NULL
 INSERT INTO `page_block` VALUES (983, 'Tabs', 'tabs', '[{\"id\":\"29d70135b4ca9c49fe2ff6c64bdc476d\",\"type\":\"s_product_attributes\",\"title\":\"Atributi\",\"x\":0,\"y\":8,\"width\":12,\"height\":2},{\"id\":\"6066d1c8e7c115.72194397\",\"type\":\"container\",\"title\":\"Bundle options\",\"x\":0,\"y\":10,\"width\":12,\"height\":10},{\"id\":\"60440722314526.35807291\",\"type\":\"container\",\"title\":\"Configurable options\",\"x\":0,\"y\":20,\"width\":12,\"height\":22},{\"id\":\"6038fc47214e57.99018634\",\"type\":\"container\",\"title\":\"Configurable bundle\",\"x\":0,\"y\":42,\"width\":12,\"height\":10}]', NULL, NULL, NULL, NULL, NULL, '2019-12-14 23:16:57', '2024-01-16 00:00:58', 'CrmBusinessBundle', 'b2fe9eeb0044f2c5d9040949a292864e', '06ae9aef9f97ef994ec2f1db5a609ab7', 1);
 INSERT INTO `page_block` VALUES (989, 'Basic details', 'container', '[]', NULL, NULL, NULL, NULL, NULL, '2019-12-14 23:34:48', '2024-01-15 23:43:35', 'CrmBusinessBundle', '882706f119dad343d8f859512bf1096f', '06ae9aef9f97ef994ec2f1db5a609ab7', 1);
 INSERT INTO `page_block` VALUES (1234, 'Project plan', 'project_gantt', NULL, NULL, NULL, NULL, NULL, NULL, '2019-12-18 21:27:22', '2019-12-18 21:27:25', 'ProjectManagementBusinessBundle', 'a782d0967934a047d1ae9096d9db882e', '97a7f168c82ad8151f66d5fa120e4920', 0);
-INSERT INTO `page_block` VALUES (1243, 'Notes', 'notes', NULL, NULL, NULL, NULL, 149, 21, '2019-12-21 09:00:58', '2019-12-21 09:01:06', 'AppBundle', '8d3e2910ad198604d4ff27ea153de877', '86cc41a4c5675de359e2469f19ca7041', 0);
-INSERT INTO `page_block` VALUES (1306, 'note user like details', 'attribute_group', NULL, NULL, NULL, 397, 496, 340, '2020-02-03 15:37:18', '2020-02-08 21:17:59', 'CrmBusinessBundle', '8a341428d7e3dbffb8e6346acdb33527', '4a7c827b0a2369054cc297746a4bbb74', 0);
-INSERT INTO `page_block` VALUES (1307, 'Note user like', 'list_view', NULL, NULL, NULL, 295, 496, 340, '2020-02-03 15:37:20', '2020-02-08 21:17:38', 'CrmBusinessBundle', '455192aac19a0d0c5520c95deff1c882', 'e55196d9fe3d5d34b7779dd689f4fc63', 0);
-INSERT INTO `page_block` VALUES (1308, 'Note user like form', 'edit_form', '[{\"title\":\"note user like details\",\"id\":\"8a341428d7e3dbffb8e6346acdb33527\",\"type\":\"attribute_group\",\"x\":0,\"y\":0,\"width\":12,\"height\":3}]', NULL, NULL, NULL, 496, 340, '2020-02-03 15:37:20', '2020-02-08 21:17:59', 'CrmBusinessBundle', '4a7c827b0a2369054cc297746a4bbb74', '563ef993e55bda7465bd2dad9086f084', 0);
 INSERT INTO `page_block` VALUES (1371, 'Supplier tabs', 'tabs', '[]', NULL, NULL, NULL, NULL, NULL, '2020-02-08 23:51:58', '2024-01-15 23:49:14', 'CrmBusinessBundle', 'fefde61d0d0c11ab308b33d0f34d433d', 'd395b3ec5d0895d7e2648d473dcda6f3', 1);
 INSERT INTO `page_block` VALUES (1402, 'Blog post container', 'container', '[]', NULL, NULL, NULL, NULL, NULL, '2020-02-14 12:00:55', '2024-01-16 00:03:20', 'ScommerceBusinessBundle', '54b99009ce5d54eb9b3592528c35dbe0', 'ffe0195126e080d423f504a8480dbe3f', 1);
 INSERT INTO `page_block` VALUES (1422, 'Planning', 'project_gantt', NULL, NULL, NULL, NULL, NULL, NULL, '2020-02-19 10:30:28', '2020-02-19 10:30:28', 'ProjectManagementBusinessBundle', '5b9cbda4d2233b531dd4d819659de96f', '97a7f168c82ad8151f66d5fa120e4920', 0);
@@ -1744,7 +1623,7 @@ INSERT INTO `page_block` VALUES (1614, 'Sales per account group', 'pie_chart', '
 INSERT INTO `page_block` VALUES (1621, 'transaction email', 'attribute_group', NULL, NULL, NULL, 491, 570, 416, '2020-05-05 22:03:45', '2020-05-05 22:03:45', 'AppBundle', '22f947bda3b031b00f53a1239c7de94a', '052eda03f4cb96d194a38c0a79ab00f6', 0);
 INSERT INTO `page_block` VALUES (1622, 'Transaction email', 'list_view', NULL, NULL, NULL, 379, 570, 416, '2020-05-05 22:03:45', '2020-05-05 22:03:45', 'AppBundle', 'c215e2b8cbc855b235f5b7febbdbc32c', '5490034ea0e35702971bb6e8836f045c', 0);
 INSERT INTO `page_block` VALUES (1623, 'Transaction email form', 'edit_form', '[{\"id\":\"22f947bda3b031b00f53a1239c7de94a\",\"type\":\"attribute_group\",\"title\":\"transaction email\",\"x\":0,\"y\":0,\"width\":4,\"height\":3},{\"id\":\"641439553ddd51.00230537\",\"type\":\"html_preview\",\"title\":\"Email preview\",\"x\":4,\"y\":0,\"width\":8,\"height\":4}]', NULL, NULL, 379, 570, 416, '2020-05-05 22:03:45', '2020-05-05 22:03:45', 'AppBundle', '052eda03f4cb96d194a38c0a79ab00f6', 'bb346820529a7a784f3b6e8e4708541e', 0);
-INSERT INTO `page_block` VALUES (1792, 'Quote tabs', 'tabs', '[{\"id\":\"e9f8d6a09a194fa7ca7d010edc69a817\",\"type\":\"list_view\",\"title\":\"Customers\",\"x\":0,\"y\":0,\"width\":12,\"height\":2},{\"id\":\"fd9a930e6d19f367c52f2002e19a5ff0\",\"type\":\"list_view\",\"title\":\"Installments\",\"x\":0,\"y\":2,\"width\":12,\"height\":2},{\"id\":\"6445b7f311e6ced8acb897560bff18dd\",\"type\":\"notes\",\"title\":\"Notes\",\"x\":0,\"y\":6,\"width\":12,\"height\":2}]', NULL, NULL, NULL, NULL, NULL, '2020-06-26 10:53:32', '2024-01-15 23:22:25', 'CrmBusinessBundle', '3ba77eb56f83495fe91847fda7be405e', 'ab2552a61e79a7123daf67bee309d2d4', 1);
+INSERT INTO `page_block` VALUES (1792, 'Quote tabs', 'tabs', '[{\"id\":\"e9f8d6a09a194fa7ca7d010edc69a817\",\"type\":\"list_view\",\"title\":\"Customers\",\"x\":0,\"y\":0,\"width\":12,\"height\":2},{\"id\":\"fd9a930e6d19f367c52f2002e19a5ff0\",\"type\":\"list_view\",\"title\":\"Installments\",\"x\":0,\"y\":2,\"width\":12,\"height\":2}]', NULL, NULL, NULL, NULL, NULL, '2020-06-26 10:53:32', '2024-05-15 19:38:03', 'CrmBusinessBundle', '3ba77eb56f83495fe91847fda7be405e', 'ab2552a61e79a7123daf67bee309d2d4', 1);
 INSERT INTO `page_block` VALUES (1793, 'Account tabs', 'tabs', '[{\"id\":\"63cafacd9ea1fa78cbb6831bbb37e2d9\",\"type\":\"notes\",\"title\":\"Notes\",\"x\":0,\"y\":26,\"width\":12,\"height\":2}]', NULL, NULL, NULL, NULL, NULL, '2020-06-26 11:52:45', '2024-01-15 23:59:58', 'CrmBusinessBundle', '55f329d592eda8251755c9add484a6c4', '407fb979c84ce4ea5f6471147df677ac', 1);
 INSERT INTO `page_block` VALUES (1795, 'Sales per months', 'bar_chart', '{\"source\":\" SELECT s.order_year as year, SUM(IF (s.order_month = 1, for_pay,0)) AS Jan, SUM(IF (s.order_month = 2, for_pay,0)) AS Feb, SUM(IF (s.order_month = 3, for_pay,0)) AS Mar, SUM(IF (s.order_month = 4, for_pay,0)) AS Apr, SUM(IF (s.order_month = 5, for_pay,0)) AS May, SUM(IF (s.order_month = 6, for_pay,0)) AS Jun, SUM(IF (s.order_month = 7, for_pay,0)) AS Jul, SUM(IF (s.order_month = 8, for_pay,0)) AS Aug, SUM(IF (s.order_month = 9, for_pay,0)) AS Sep, SUM(IF (s.order_month = 10, for_pay,0)) AS Oct, SUM(IF (s.order_month = 11, for_pay,0)) AS Nov, SUM(IF (s.order_month = 12, for_pay,0)) AS Decm FROM( SELECT YEAR (i.created) AS order_year, MONTH (i.created) AS order_month , i.base_price_total as for_pay FROM order_entity i WHERE i.account_id =:id )s GROUP BY s.order_year\",\"xaxis\":[\"year\"],\"yaxis\":[{\"field\":\"Jan\",\"label\":\"Jan\",\"aggregate\":\"SUM\"},{\"field\":\"Feb\",\"label\":\"Feb\",\"aggregate\":\"SUM\"},{\"field\":\"Mar\",\"label\":\"Mar\",\"aggregate\":\"SUM\"},{\"field\":\"Apr\",\"label\":\"Apr\",\"aggregate\":\"SUM\"},{\"field\":\"May\",\"label\":\"May\",\"aggregate\":\"SUM\"},{\"field\":\"Jun\",\"label\":\"Jun\",\"aggregate\":\"SUM\"},{\"field\":\"Jul\",\"label\":\"Jul\",\"aggregate\":\"SUM\"},{\"field\":\"Aug\",\"label\":\"Aug\",\"aggregate\":\"SUM\"},{\"field\":\"Sep\",\"label\":\"Sep\",\"aggregate\":\"SUM\"},{\"field\":\"Oct\",\"label\":\"Oct\",\"aggregate\":\"SUM\"},{\"field\":\"Nov\",\"label\":\"Nov\",\"aggregate\":\"SUM\"},{\"field\":\"Decm\",\"label\":\"Decm\",\"aggregate\":\"SUM\"}],\"filters\":\"\"}', NULL, NULL, NULL, NULL, NULL, '2020-06-26 12:35:42', '2020-06-26 12:36:12', 'CrmBusinessBundle', '6fb515fcd1fcc1e7b00bd99f8cdbc99f', '407fb979c84ce4ea5f6471147df677ac', 0);
 INSERT INTO `page_block` VALUES (1796, 'Sales per product category', 'pie_chart', '{\"source\":\" SELECT YEAR (i.created) AS invoice_year, ii.base_price_total as for_pay, pg.name as product_group FROM order_entity i JOIN order_item_entity ii on ii.order_id=i.id JOIN product_entity p on p.id=ii.product_id JOIN product_product_group_link_entity ppg on ppg.product_id=p.id JOIN product_group_entity pg on pg.id=ppg.product_group_id and pg.id in (99,100,101,102,103,104,105) WHERE i.account_id =:id \",\"xaxis\":[\"product_group\"],\"yaxis\":[{\"field\":\"for_pay\",\"label\":\"Sale\",\"aggregate\":\"SUM\"}],\"filters\":\"\"}', NULL, NULL, NULL, NULL, NULL, '2020-06-26 12:37:01', '2020-06-26 12:37:10', 'CrmBusinessBundle', '4ace064d3c7636dc162d2641745d684d', '407fb979c84ce4ea5f6471147df677ac', 0);
@@ -1877,9 +1756,6 @@ INSERT INTO `page_block` VALUES (2822, 'Lead tabs', 'tabs', '[{\"id\":\"64a2d59c
 INSERT INTO `page_block` VALUES (2833, 'Lead Notes', 'notes', NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-03 16:05:16', '2023-07-03 16:05:16', 'CrmBusinessBundle', '64a2d59c09cc42.58454918', '64a2d16b60e511.87017027', 0);
 INSERT INTO `page_block` VALUES (2834, 'Included countries', 'multiselect', '{\"link_entity\":\"payment_type_country_link\",\"parent_entity\":\"payment_type\",\"child_entity\":\"country\",\"attribute_id\":\"6123\",\"mandatory\":\"0\"}', NULL, NULL, NULL, NULL, NULL, '2023-08-01 23:51:02', '2023-08-01 23:51:02', 'CrmBusinessBundle', '64c97e4640fb30.46871607', '3b0e72301c0cf4cdc31e2d8a52a35b01', 0);
 INSERT INTO `page_block` VALUES (2836, 'Content by entity type', 's_store_content', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-26 19:19:17', '2023-05-26 19:19:17', 'ScommerceBusinessBundle', '6470ea1530f834.39353263', '8a28605c3957efa9f8a91bcc5d4235c9', 0);
-INSERT INTO `page_block` VALUES (2837, 'Recording', 'list_view', NULL, NULL, NULL, 737, 831, 684, '2023-07-22 16:33:16', '2023-07-22 16:33:16', 'AppBundle', '64bbe8ac4e1f41.39474799', '64bbe8ac991962.89876424', 0);
-INSERT INTO `page_block` VALUES (2838, 'Recording form', 'edit_form', '[{\"title\":\"recording\",\"id\":\"64bbe8aad999c6.31593910\",\"type\":\"attribute_group\",\"x\":0,\"y\":0,\"width\":12,\"height\":2}]', NULL, NULL, NULL, 831, 684, '2023-07-22 16:33:17', '2023-07-22 16:33:17', 'AppBundle', '64bbe8ad199508.72560610', '64bbe8ad709156.36691424', 0);
-INSERT INTO `page_block` VALUES (2854, 'recording', 'attribute_group', NULL, NULL, NULL, 815, 831, 684, '2023-07-22 16:33:14', '2023-07-22 16:33:14', 'AppBundle', '64bbe8aad999c6.31593910', '64bbe8ad199508.72560610', 0);
 INSERT INTO `page_block` VALUES (2862, 'Spending rules loyalty', 'loyalty_spendings_rules', NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-06 09:33:51', '2023-09-06 09:34:06', 'CrmBusinessBundle', '64f82b5f209ba3.93870804', '643d4654f04ee3.14200483', 1);
 INSERT INTO `page_block` VALUES (2870, 'Product rules', 'front_product_rules', NULL, NULL, NULL, NULL, NULL, NULL, '2023-09-18 15:13:11', '2023-09-18 15:13:11', 'ScommerceBusinessBundle', '65084ce72c1626.45582942', '62e92d01be0e97.22991983', 0);
 INSERT INTO `page_block` VALUES (2871, 'Tabs', 'tabs', '[]', NULL, NULL, NULL, NULL, NULL, '2023-09-19 00:02:37', '2024-01-16 00:02:26', 'ScommerceBusinessBundle', '6508c8fde40650.54570820', '62e92d01be0e97.22991983', 1);
@@ -4103,7 +3979,6 @@ INSERT INTO `privilege` VALUES (28991, 1, '5', 'ff6e75e2c068df7b4065f6a5ab41ebaf
 INSERT INTO `privilege` VALUES (29299, 1, '5', 'ffe0195126e080d423f504a8480dbe3f');
 INSERT INTO `privilege` VALUES (74622, 1, '6', '06ae9aef9f97ef994ec2f1db5a609ab7');
 INSERT INTO `privilege` VALUES (5482, 1, '6', '4e0cdb878325d53ad79a74504bf97a96');
-INSERT INTO `privilege` VALUES (28931, 1, '6', '5a5d54fb1322fa17ec5018ba278862be');
 INSERT INTO `privilege` VALUES (17260, 1, '6', '5fab1187e829691e86a131a7aa7615c3');
 INSERT INTO `privilege` VALUES (74616, 1, '6', '6016c3d6d9aad8.85948394');
 INSERT INTO `privilege` VALUES (99722, 1, '6', '60313b8d2237f7.48870400');
@@ -4132,7 +4007,6 @@ INSERT INTO `privilege` VALUES (100800, 1, '6', '63d462090833e7.26142547');
 INSERT INTO `privilege` VALUES (101002, 1, '6', '6422b83b1905a6.50268665');
 INSERT INTO `privilege` VALUES (101003, 1, '6', '6425fb1dbcc9c1.27713267');
 INSERT INTO `privilege` VALUES (101059, 1, '6', '646281988228b7.17136868');
-INSERT INTO `privilege` VALUES (101142, 1, '6', '64bbe8abeb02c3.60426183');
 INSERT INTO `privilege` VALUES (74606, 1, '6', '6c849d1e047335ce7953d692b51f013d');
 INSERT INTO `privilege` VALUES (74604, 1, '6', '77098ec011ec62da941df95103db3eed');
 INSERT INTO `privilege` VALUES (19152, 1, '6', '991d904cc1110f889be28ad88b84de34');
@@ -5650,7 +5524,6 @@ INSERT INTO `privilege` VALUES (97047, 10, '5', 'bb346820529a7a784f3b6e8e4708541
 INSERT INTO `privilege` VALUES (96945, 10, '5', 'eb53d64f48328ad842e253aa8ee590ce');
 INSERT INTO `privilege` VALUES (96964, 10, '5', 'f5bb54be7434e02218388cef87ce76b3');
 INSERT INTO `privilege` VALUES (96336, 10, '6', '4e0cdb878325d53ad79a74504bf97a96');
-INSERT INTO `privilege` VALUES (96655, 10, '6', '5a5d54fb1322fa17ec5018ba278862be');
 INSERT INTO `privilege` VALUES (96407, 10, '6', '5fab1187e829691e86a131a7aa7615c3');
 INSERT INTO `privilege` VALUES (98653, 10, '6', '606447a66aa089.40066791');
 INSERT INTO `privilege` VALUES (100492, 10, '6', '629200cba71cb9.96857518');
@@ -5838,40 +5711,6 @@ INSERT INTO `privilege` VALUES (101406, 11, '4', '65a94b7879b171.43033607');
 INSERT INTO `privilege` VALUES (101433, 11, '4', '65ac1f71d9e5e6.84480303');
 INSERT INTO `privilege` VALUES (101457, 11, '4', '65ac1fa9856e08.21112284');
 INSERT INTO `privilege` VALUES (101484, 11, '4', '65d0ed41b15655.83871216');
-
--- ----------------------------
--- Table structure for recording_entity
--- ----------------------------
-DROP TABLE IF EXISTS `recording_entity`;
-CREATE TABLE `recording_entity`  (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `entity_type_id` smallint(5) UNSIGNED NOT NULL,
-  `attribute_set_id` smallint(5) UNSIGNED NOT NULL,
-  `created` datetime(0) NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified` datetime(0) NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `locked` datetime(0) NULL DEFAULT NULL,
-  `locked_by` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `modified_by` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `created_by` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `version` int(11) NULL DEFAULT 1,
-  `min_version` int(11) NULL DEFAULT 0,
-  `entity_state_id` smallint(5) UNSIGNED NULL DEFAULT NULL,
-  `file` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `filename` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `file_type` varchar(5) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `size` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `file_source` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `core_user_id` int(10) UNSIGNED NULL DEFAULT NULL,
-  `transcript` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `1b0fe7a2fee4b0c97a13637fc63062eb`(`core_user_id`) USING BTREE,
-  CONSTRAINT `recording_entity_ibfk_1` FOREIGN KEY (`core_user_id`) REFERENCES `user_entity` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of recording_entity
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for responsive_image_style_entity
@@ -6087,7 +5926,7 @@ CREATE TABLE `translation_entity`  (
   `is_custom` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `translation_entity_translation_key_unique`(`translation_key`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 601 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 602 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of translation_entity
@@ -6300,7 +6139,7 @@ INSERT INTO `translation_entity` VALUES (205, 826, 679, '2024-05-06 19:13:18', '
 INSERT INTO `translation_entity` VALUES (206, 826, 679, '2024-05-06 19:13:18', '2024-05-06 19:14:24', NULL, NULL, 'alen', 'alen', NULL, NULL, 1, 'Make document', '{\"1\":\"\"}', NULL);
 INSERT INTO `translation_entity` VALUES (207, 826, 679, '2024-05-06 19:13:18', '2024-05-06 19:14:24', NULL, NULL, 'alen', 'alen', NULL, NULL, 1, 'Set custom', '{\"1\":\"\"}', NULL);
 INSERT INTO `translation_entity` VALUES (208, 826, 679, '2024-05-06 19:13:18', '2024-05-06 19:13:20', NULL, NULL, 'alen', 'alen', NULL, NULL, 1, 'Unset custom', '{\"1\":\"\"}', NULL);
-INSERT INTO `translation_entity` VALUES (209, 826, 679, '2024-05-06 20:03:08', '2024-05-13 20:56:15', NULL, NULL, 'anon.', 'anon.', NULL, NULL, 1, 'Username', '{\"1\":\"\"}', NULL);
+INSERT INTO `translation_entity` VALUES (209, 826, 679, '2024-05-06 20:03:08', '2024-05-15 19:25:23', NULL, NULL, 'anon.', 'anon.', NULL, NULL, 1, 'Username', '{\"1\":\"\"}', NULL);
 INSERT INTO `translation_entity` VALUES (210, 826, 679, '2024-05-06 20:03:08', '2024-05-06 20:03:08', NULL, NULL, 'anon.', 'anon.', NULL, NULL, 1, 'Your username', '{\"1\":\"\"}', NULL);
 INSERT INTO `translation_entity` VALUES (211, 826, 679, '2024-05-06 20:03:08', '2024-05-06 20:03:08', NULL, NULL, 'anon.', 'anon.', NULL, NULL, 1, 'password', '{\"1\":\"\"}', NULL);
 INSERT INTO `translation_entity` VALUES (212, 826, 679, '2024-05-06 20:03:08', '2024-05-06 20:03:08', NULL, NULL, 'anon.', 'anon.', NULL, NULL, 1, 'Your password', '{\"1\":\"\"}', NULL);
@@ -6692,6 +6531,7 @@ INSERT INTO `translation_entity` VALUES (597, 826, 679, '2024-05-12 22:11:25', '
 INSERT INTO `translation_entity` VALUES (598, 826, 679, '2024-05-12 22:11:25', '2024-05-12 22:11:27', NULL, NULL, 'alen', 'alen', NULL, NULL, 1, 'Retci u kojima se nisu pojavile greške, ali nisu nužno importani', '{\"1\":\"\"}', NULL);
 INSERT INTO `translation_entity` VALUES (599, 826, 679, '2024-05-12 22:11:25', '2024-05-12 22:11:27', NULL, NULL, 'alen', 'alen', NULL, NULL, 1, 'Import file', '{\"1\":\"\"}', NULL);
 INSERT INTO `translation_entity` VALUES (600, 826, 679, '2024-05-12 22:12:04', '2024-05-12 22:12:14', NULL, NULL, 'alen', 'alen', NULL, NULL, 1, 'Resolve all', '{\"1\":\"\"}', NULL);
+INSERT INTO `translation_entity` VALUES (601, 826, 679, '2024-05-15 18:17:28', '2024-05-15 18:17:28', NULL, NULL, 'anon.', 'anon.', NULL, NULL, 1, 'Invalid CSRF token.', '{\"1\":\"\"}', NULL);
 
 -- ----------------------------
 -- Table structure for user_entity
@@ -6750,7 +6590,7 @@ CREATE TABLE `user_entity`  (
 -- Records of user_entity
 -- ----------------------------
 INSERT INTO `user_entity` VALUES (149, 'system', 'system', 'info@shipshape-solutions.com', 'info@shipshape-solutions.com', 1, 'iwhzp3c9gj4sw0gkcgog4w8g4okkk4', '$2y$13$7F2j4lQ/8/X359oQ2ShOfeykqHHBmFn05/7K/XJn94HaxtBoRJTh6', '2024-05-02 22:42:13', NULL, 0, NULL, NULL, NULL, 'a:1:{i:0;s:10:\"ROLE_ADMIN\";}', 0, NULL, NULL, '2020-05-26 15:00:55', '2020-05-26 15:00:55', 2, 12, 140, 'system', 'system', NULL, NULL, 1, 0, NULL, 'system', 1, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `user_entity` VALUES (11689, 'alen', 'alen', 'alen.pagac@gmail.com', 'alen.pagac@gmail.com', 1, 'y5dWPfUmQxyCLjdeaxIIVsfF8gYVku4', '$2y$13$nKS2Zbk84A6GE53j24L3LOEuuHlgNy15d1EaYwxOkVYpa/m06hrEK', '2024-05-13 21:46:49', NULL, 0, NULL, '5TiTJb1GOzklw8qzJNWNxcg-nZMH2Apwtm3pZKSatYY', '2024-05-03 16:47:26', 'a:1:{i:0;s:10:\"ROLE_ADMIN\";}', 0, NULL, NULL, '2023-03-17 11:03:10', '2023-03-17 11:03:10', 1, 12, 140, 'Alen', 'Pagač', 'system', 'system', NULL, NULL, NULL, 'Alen Pagač', 1, NULL, NULL, '#ff0000', NULL, NULL, NULL);
+INSERT INTO `user_entity` VALUES (11689, 'alen', 'alen', 'alen.pagac@gmail.com', 'alen.pagac@gmail.com', 1, 'y5dWPfUmQxyCLjdeaxIIVsfF8gYVku4', '$2y$13$nKS2Zbk84A6GE53j24L3LOEuuHlgNy15d1EaYwxOkVYpa/m06hrEK', '2024-05-15 19:36:06', NULL, 0, NULL, '5TiTJb1GOzklw8qzJNWNxcg-nZMH2Apwtm3pZKSatYY', '2024-05-03 16:47:26', 'a:1:{i:0;s:10:\"ROLE_ADMIN\";}', 0, NULL, NULL, '2023-03-17 11:03:10', '2023-03-17 11:03:10', 1, 12, 140, 'Alen', 'Pagač', 'system', 'system', NULL, NULL, NULL, 'Alen Pagač', 1, NULL, NULL, '#ff0000', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for user_role_entity
