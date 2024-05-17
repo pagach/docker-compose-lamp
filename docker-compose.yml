@@ -18,7 +18,7 @@ services:
       - ./lamp/config/php/php.ini:/usr/local/etc/php/php.ini
       - ./lamp/config/vhosts:/etc/apache2/sites-enabled
       - ./lamp/logs/apache2:/var/log/apache2
-      - ~/.ssh:/root/.ssh
+      - ~/.ssh:/home/appuser/.ssh
     environment:
       - APACHE_DOCUMENT_ROOT=/var/www/html/${DOCUMENT_ROOT:-web}
     networks:
