@@ -14,7 +14,7 @@ services:
     links:
       - mysql
     volumes:
-      - ~/f5-projects/${PROJECT_NAME}:/var/www/html
+      - ..:/var/www/html
       - ./lamp/config/php/php.ini:/usr/local/etc/php/php.ini
       - ./lamp/config/vhosts:/etc/apache2/sites-enabled
       - ~/.ssh:/home/appuser/.ssh
